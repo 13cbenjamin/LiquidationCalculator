@@ -1,5 +1,5 @@
 <!--#########################################################################################################
-// Created by Chris Benjamin - IT Manager - CH13 Trustee of Michael G. Malaier
+// Created by Chris Benjamin - IT Manager - CH13 Trustee office of Michael G. Malaier
 // Copyright 2020 - Chris Benjamin. Do not re-use without written permission (info@chapter13tacoma.org)
 // Created as public use calculator by attorneys to view liquidation calculations 
 // Trustee office implies no warranty as to the accuracy of calculations, use for approximation only
@@ -7,10 +7,24 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<p>
-    To use this calculator please complete all necessary fields. You can submit up to 6 assets (One per column).</br> Once you are finished, click <b>Submit</b> to calculate. </bR> Fields with Yellow Background are calculated values
-</p>
-
+</br>
+<ul>
+    <li>To use this calculator complete all necessary fields then click <b>Calculate</b></li>
+    <li>The Add Column button will allow you to add up to 3 additional columns</li>
+    <li>Th Remove Column can be used to remove added columns</li>
+    <li>Fields with <mark>Yellow</mark> are calculated values</li>
+    <li>The Reset button can be used to reset the calculator</li>
+    <li>Percentage Cost of Sale Trustee Default Values - 8.0% for Real Property</li>
+    <li>Exemption for Vehicles: $200 each</li>
+    <li>Hypothetical Fees Calculation</li>
+    <ul>
+    <li>     Disbursement, Incl. Secured, Under $5,000: 25% of Disbursement</li>
+    <li>     Disbursement, Incl. Secured, Between $5,000 & $50,000: 10% of (Disbursement minus $5,000) plus $1,250</li>
+    <li>     Disbursement, Incl. Secured, between $50,000 & 1,000,000: 5% of (Disbursement minus $50,000) plus $5,570</li>
+    <li>     Disbursement, Incl. Secured, $1,000,0000+: 3% of (Disbursement minus $1,000,000) plus $53,250</li>
+    </ul>
+</ul>
+</br>
 
 <table class="tac_table">
     
@@ -20,40 +34,40 @@
     <tbody>
             <tr>
                 <td rowspan="2"></td>
-                <td class="tac_heading2 tac_adjustcolumn3" style="background-color: #E2E2E2;" colspan="6" ><strong></strong>Description of Asset (Eg. House, Residence)</strong></td>
+                <td class="tac_heading2 tac_adjustcolumn3" style="background-color: #E2E2E2;" colspan="6" ><strong>Type of Asset</strong></td>
                 <td class="tac_money" rowspan="2" valign="center"><strong>TOTALS</strong></td>
             </tr>
 
             <tr>
-                <td><select name="asset type" size="1" id="121"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
-                <td><select name="asset type" size="1" id="131"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
-                <td><select name="asset type" size="1" id="141"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
-                <td class="tac_hiddencolumn1"><select name="asset type" size="1" id="151"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
-                <td class="tac_hiddencolumn2"><select name="asset type" size="1" id="161"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
-                <td class="tac_hiddencolumn3"><select name="asset type" size="1" id="171"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
+                <td><select name="asset type" size="1" id="121" tabindex="1"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td><select name="asset type" size="1" id="131" tabindex="20"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td><select name="asset type" size="1" id="141" tabindex="30"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn1"><select name="asset type" size="1" id="151" tabindex="40"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn2"><select name="asset type" size="1" id="161" tabindex="50"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn3"><select name="asset type" size="1" id="171" tabindex="60"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
             </tr>
                 <tr>
                     <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8" ><strong>Determination of Non-Exempt Equity</strong></td>
                 </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Full Fair Market Value of Asset:</td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="221" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="231" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="241" value="0"></td>
-                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="251" value="0"></td>
-                <td class="tac_money tac_hiddencolumn2"><input type="text" class="tac_input" id="261" value="0"></td>
-                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="271" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="221" value="0" tabindex="11"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="231" value="0" tabindex="21"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="241" value="0" tabindex="31"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="251" value="0" tabindex="41"></td>
+                <td class="tac_money tac_hiddencolumn2"><input type="text" class="tac_input" id="261" value="0" tabindex="51"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="271" value="0" tabindex="61"></td>
                 <td class="tac_money tac_readonly"><input type="text" id="281" value="0" readonly></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Percentage of Ownership (%):</td>
-                <td class="tac_percentage" ><input type="text" class="tac_input" id="222" value="0"></td>
-                <td class="tac_percentage" ><input type="text" class="tac_input" id="232" value="0"></td>
-                <td class="tac_percentage" ><input type="text" class="tac_input" id="242" value="0"></td>
-                <td class="tac_percentage tac_hiddencolumn1"><input type="text" class="tac_input" id="252" value="0"></td>
-                <td class="tac_percentage tac_hiddencolumn2"><input type="text" class="tac_input" id="262" value="0"></td>
-                <td class="tac_percentage tac_hiddencolumn3"><input type="text" class="tac_input" id="272" value="0"></td>
-                <td id=282 >N/A</td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="222" value="0" tabindex="12"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="232" value="0" tabindex="22"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="242" value="0" tabindex="32"></td>
+                <td class="tac_percentage tac_hiddencolumn1"><input type="text" class="tac_input" id="252" value="0" tabindex="42"></td>
+                <td class="tac_percentage tac_hiddencolumn2"><input type="text" class="tac_input" id="262" value="0" tabindex="52"></td>
+                <td class="tac_percentage tac_hiddencolumn3"><input type="text" class="tac_input" id="272" value="0" tabindex="62"></td>
+                <td id=282 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Debtor's Actual Gross Interest:</td>
@@ -63,17 +77,17 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="253" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="263" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="273" value="0" readonly ></td>
-                <td id=283 >N/A</td>
+                <td id=283 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Total of Valid & Secured Loans:</td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="224" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="234" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="244" value="0"></td>
-                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="254" value="0"></td>
-                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="264" value="0"></td>
-                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="274" value="0"></td>
-                <td id=284 >N/A</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="224" value="0" tabindex="13"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="234" value="0" tabindex="23"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="244" value="0" tabindex="33"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="254" value="0" tabindex="43"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="264" value="0" tabindex="53"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="274" value="0" tabindex="63"></td>
+                <td id=284 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Pro-rated Liens:</td>
@@ -83,7 +97,7 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="255" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="265" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="275" value="0" readonly ></td>
-                <td id=285 >N/A</td>
+                <td id=285 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Debtor's Equity:</td>
@@ -100,33 +114,33 @@
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Type of Exemption:</td>
-                <td><input type="textarea" class="tac_input tac_text" id="321" ></td>
-                <td><input type="textarea" class="tac_input tac_text" id="331" ></td>
-                <td><input type="textarea" class="tac_input tac_text" id="341" ></td>
-                <td class="tac_hiddencolumn1" ><input type="textarea" class="tac_input tac_text" id="351" ></td>
-                <td class="tac_hiddencolumn2" ><input type="textarea" class="tac_input tac_text" id="361" ></td>
-                <td class="tac_hiddencolumn3" ><input type="textarea" class="tac_input tac_text" id="371" ></td>
-                <td id=381 >N/A</td>
+                <td><input type="textarea" class="tac_input tac_text" id="321"  tabindex="14"></td>
+                <td><input type="textarea" class="tac_input tac_text" id="331"  tabindex="24"></td>
+                <td><input type="textarea" class="tac_input tac_text" id="341"  tabindex="34"></td>
+                <td class="tac_hiddencolumn1" ><input type="textarea" class="tac_input tac_text" id="351" tabindex="44"></td>
+                <td class="tac_hiddencolumn2" ><input type="textarea" class="tac_input tac_text" id="361" tabindex="54"></td>
+                <td class="tac_hiddencolumn3" ><input type="textarea" class="tac_input tac_text" id="371" tabindex="64"></td>
+                <td id=381 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Amount of Exemption:</td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="322" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="332" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="342" value="0"></td>
-                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="352" value="0"></td>
-                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="362" value="0"></td>
-                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="372" value="0"></td>
-                <td id=382 >N/A</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="322" value="0" tabindex="15"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="332" value="0" tabindex="25"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="342" value="0" tabindex="35"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="352" value="0" tabindex="45"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="362" value="0" tabindex="55"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="372" value="0" tabindex="65"></td>
+                <td id=382 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Wildcard Exemption Used:</td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="323" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="333" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="343" value="0"></td>
-                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="353" value="0"></td>
-                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="363" value="0"></td>
-                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="373" value="0"></td>
-                <td id=383 >N/A</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="323" value="0" tabindex="16"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="333" value="0" tabindex="26"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="343" value="0" tabindex="36"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="353" value="0" tabindex="46"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="363" value="0" tabindex="56"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="373" value="0" tabindex="66"></td>
+                <td id=383 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Total of Exemptions Used:</td>
@@ -136,13 +150,13 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="354" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="364" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="374" value="0" readonly ></td>
-                <td id=384 >N/A</td>
+                <td id=384 ></td>
             </tr>
             <tr>
                 <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8" ><strong>Calculation of Hypothetical Administrative Costs of Chapter 7 Trustee</strong></td>
             </tr>
             <tr>
-                <td class=tac_heading3 style="background-color:#b9c9fe;" rowspan="5">Total Hyp. Ch 7. Trustee Fees:</td>
+                <td class=tac_heading3 style="background-color:#b9c9fe;" >Total Hyp. Ch 7. Trustee Fees:</td>
                 <td class="tac_readonly"><input type="text" class="tac_input" id="421" value="0" readonly ></td>
                 <td class="tac_readonly"><input type="text" class="tac_input" id="431" value="0" readonly ></td>
                 <td class="tac_readonly"><input type="text" class="tac_input" id="441" value="0" readonly ></td>
@@ -152,25 +166,13 @@
                 <td class="tac_readonly"><input type="text" class="tac_input" id="481" value="0" readonly ></td>
             </tr>
             <tr>
-                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, Under $5,000: 25% of Disbursement:</strong></td>
-            </tr>
-            <tr>
-                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, Between $5,000 & $50,000: 10% of (Disbursement minus $5,000) plus $1,250:</strong></td>
-            </tr>
-            <tr>
-                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, between $50,000 & 1,000,000: 5% of (Disbursement minus $50,000) plus $5,570:</strong></td>
-            </tr>
-            <tr>
-                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, $1,000,0000+: 3% of (Disbursement minus $1,000,000) plus $53,250:</strong></td>
-            </tr>
-            <tr>
                 <td  class=tac_heading3 style="background-color:#b9c9fe;" rowspan="2">Add. Hyp. Ch. 7 Admin Expenses:</td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="426" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="436" value="0"></td>
-                <td class="tac_money" ><input type="text" class="tac_input" id="446" value="0"></td>
-                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="456" value="0"></td>
-                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="466" value="0"></td>
-                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="476" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="426" value="0" tabindex="17"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="436" value="0" tabindex="27"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="446" value="0" tabindex="37"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="456" value="0" tabindex="47"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="466" value="0" tabindex="57"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="476" value="0" tabindex="67"></td>
                 <td class="tac_money" ><input type="text" class="tac_input" id="486" value="0" readonly></td>
             </tr>
             <tr>
@@ -187,7 +189,7 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="551" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="561" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="571" value="0" readonly ></td>
-                <td id=581 >N/A</td>
+                <td id=581 ></td>
 
             </tr>
             <tr>
@@ -198,18 +200,18 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="552" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="562" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="572" value="0" readonly ></td>
-                <td id=581 >N/A</td>
+                <td id=581 ></td>
 
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Percentage Cost of Sale:</td>
-                <td class="tac_percentage" ><input type="text" class="tac_input" id="523" value="0"></td>
-                <td class="tac_percentage" ><input type="text" class="tac_input" id="533" value="0"></td>
-                <td class="tac_percentage" ><input type="text" class="tac_input" id="543" value="0"></td>
-                <td class="tac_percentage tac_hiddencolumn1" ><input type="text" class="tac_input" id="553" value="0"></td>
-                <td class="tac_percentage tac_hiddencolumn2" ><input type="text" class="tac_input" id="563" value="0"></td>
-                <td class="tac_percentage tac_hiddencolumn3" ><input type="text" class="tac_input" id="573" value="0"></td>
-                <td class="tac_percentage" id=583 >N/A</td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="523" value="0" tabindex="18"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="533" value="0" tabindex="28"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="543" value="0" tabindex="38"></td>
+                <td class="tac_percentage tac_hiddencolumn1" ><input type="text" class="tac_input" id="553" value="0" tabindex="48"></td>
+                <td class="tac_percentage tac_hiddencolumn2" ><input type="text" class="tac_input" id="563" value="0" tabindex="58"></td>
+                <td class="tac_percentage tac_hiddencolumn3" ><input type="text" class="tac_input" id="573" value="0" tabindex="68"></td>
+                <td class="tac_percentage" id=583 ></td>
             </tr>
             <tr>
                 <td class=tac_heading3 style="background-color:#b9c9fe;">Hypothetical Cost of Sale:</td>
@@ -219,7 +221,7 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="554" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="564" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="574" value="0" readonly ></td>
-                <td id=584 >N/A</td>
+                <td id=584 ></td>
 
             </tr>
             <tr>
@@ -230,7 +232,7 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="555" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="565" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="575" value="0" readonly ></td>
-                <td id=585 >N/A</td>
+                <td id=585 ></td>
 
             </tr>
             <tr>
@@ -241,7 +243,7 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="556" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="566" value="0" readonly ></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="576" value="0" readonly ></td>
-                <td id=586 >N/A</td>
+                <td id=586 ></td>
 
             </tr>
             <tr>
@@ -282,10 +284,11 @@
 
     </tbody>
 </table>
-<button class="tac_ButtonB" onclick="other_amount_input()">Calculate</button>
-<button class="tac_ButtonG" onclick="AddColumn()">Add Column +</button>
-<button class="tac_ButtonR" onclick="RemoveColumn()">Remove Collapse -</button>
-<button class="tac_ButtonGray" onclick="Reset()">Reset</button>
+<button class="tac_ButtonB" onclick="other_amount_input()" tabindex="80">Calculate</button>
+<button class="tac_ButtonG" onclick="AddColumn()" tabindex="81">Add Column +</button>
+<button class="tac_ButtonR" onclick="RemoveColumn()" tabindex="82">Remove Collapse -</button>
+<button class="tac_ButtonGray" onclick="Reset()" tabindex="83">Reset</button>
+
 <script>
     collapse(); ///perform collapse as first step
     add_format(); //format fields 
@@ -424,29 +427,59 @@ function calculate_values1(){
 
     
 function hypotheticalcalc(A,L,E,F1,F2,FFinal){
-                if ((A + L - E) < C1) {
+                if (L-E==0){
+                    var result = 0;
+                    document.getElementById(F1).value = result;
+                    document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
+                //console.log("Ran L-E==0")
+                //console.log("L: " + L)
+                //console.log("E: " + E)
+
+                }
+                
+               else if ((A + L - E) < C1) {
                     var result = (P1*(A+L-E))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
-                  //  return;   
+                  //console.log("Ran (A + L -E) < C1")
+                  //console.log("A: " + A)
+                  //console.log("L: " + L)  
+                  //console.log("E: " + E)  
+                  //console.log("C1: " + C1)  
+
                 }
                 else if (((A + L - E) >= C1) && ((A + L - E) < C2)) {
-                    var result = (AddT1 + (P2*(A1+L1-E1-FeeT1)))
+                    var result = (AddT1 + (P2*(A+L-E-FeeT1)))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
-                   // return;
+                   // document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
+                  //console.log("Ran ((A + L - E) >= C1) && ((A + L - E) < C2)")
+                  //console.log("A: " + A)
+                  //console.log("L: " + L)  
+                  //console.log("E: " + E)  
+                  //console.log("C1: " + C1)  
+                  //console.log("C2: " + C2)  
                 }
                 else if (((A + L - E) >= C2) && ((A + L- E) < C3)) {
                     var result = (AddT2 + (P3*(A+L-E-FeeT2)))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);   
-                   // return;
+                //console.log("Ran ((A + L - E) >= C2) && ((A + L- E) < C3)")
+                  //console.log("A: " + A)
+                  //console.log("L: " + L)  
+                  //console.log("E: " + E)  
+                  //console.log("C2: " + C2)  
+                  //console.log("C3: " + C3) 
                 }
                 else if ((A + L - E) > C3) {
                     var result = (AddT3 + (P4*(A+L-E-FeeT3)))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);   
-                  //  return;
+                //console.log("Ran (A + L -E) > C3")
+                  //console.log("A: " + A)
+                  //console.log("L: " + L)  
+                  //console.log("E: " + E)  
+                  //console.log("C3: " + C1) 
                 }
                 else {
                     document.getElementById(F1).value = "Invalid";
@@ -614,7 +647,7 @@ function collapse()
 
 var i;
 i = 3;
-console.log("i beginning=: " + i)
+//console.log("i beginning=: " + i)
 function RemoveColumn() { // hide columns
         if (i > 5) 
         { //hide column 6
@@ -650,7 +683,7 @@ function RemoveColumn() { // hide columns
             i = 3; 
         }   
 
-        console.log("i =: " + i)
+        //console.log("i =: " + i)
 
 }
 
@@ -658,7 +691,7 @@ function RemoveColumn() { // hide columns
 
 function AddColumn() 
 {
-    console.log("i at beginning of function" + i)
+    //console.log("i at beginning of function" + i)
     if (i <= 4) //when i = 3, show 4th column
         {
             $('.tac_hiddencolumn1').show();
@@ -667,7 +700,7 @@ function AddColumn()
             $('.tac_adjustcolumn3').attr('colspan',4); 
             $('tac_ButtonR').show();
             i = 5;
-            console.log("I ran i < 4");
+            //console.log("I ran i < 4");
         }
     else if (i > 3 && i <= 5 ) 
         { //show 5th column 
@@ -678,7 +711,7 @@ function AddColumn()
             $('tac_ButtonR').show();
             $('tac_ButtonG').hide();
             i = 6
-            console.log("I ran i > 3 && i < 5 ");
+            //console.log("I ran i > 3 && i < 5 ");
 
         }
     else if (i > 5 && i <= 7 ) 
@@ -689,14 +722,14 @@ function AddColumn()
             $('.tac_adjustcolumn3').attr('colspan',6); 
             $('tac_ButtonR').show();
             i = 9;
-            console.log("I Ran i > 4 && i < 6 ")
+            //console.log("I Ran i > 4 && i < 6 ")
         }
     else
         { // error max columns reached 
             alert("Maximum number of columns have been added");
             $('tac_ButtonG').attr('visbility', 'hidden');
         }   
-        console.log("i =: " + i)
+        //console.log("i =: " + i)
        // i++; 
 
 }
