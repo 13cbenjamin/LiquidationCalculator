@@ -1,0 +1,723 @@
+<!--#########################################################################################################
+// Created by Chris Benjamin - IT Manager - CH13 Trustee of Michael G. Malaier
+// Copyright 2020 - Chris Benjamin. Do not re-use without written permission (info@chapter13tacoma.org)
+// Created as public use calculator by attorneys to view liquidation calculations 
+// Trustee office implies no warranty as to the accuracy of calculations, use for approximation only
+//#########################################################################################################-->
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<p>
+    To use this calculator please complete all necessary fields. You can submit up to 6 assets (One per column).</br> Once you are finished, click <b>Submit</b> to calculate. </bR> Fields with Yellow Background are calculated values
+</p>
+
+
+<table class="tac_table">
+    
+    <thead>
+        <th class=tac_heading colspan="8">Chapter 13 Calculation of Minimum Distribution to Unsecured Claims to Protect Non-Exempt Assets</th>
+    </thead>
+    <tbody>
+            <tr>
+                <td rowspan="2"></td>
+                <td class="tac_heading2 tac_adjustcolumn3" style="background-color: #E2E2E2;" colspan="6" ><strong></strong>Description of Asset (Eg. House, Residence)</strong></td>
+                <td class="tac_money" rowspan="2" valign="center"><strong>TOTALS</strong></td>
+            </tr>
+
+            <tr>
+                <td><select name="asset type" size="1" id="121"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
+                <td><select name="asset type" size="1" id="131"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
+                <td><select name="asset type" size="1" id="141"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
+                <td class="tac_hiddencolumn1"><select name="asset type" size="1" id="151"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
+                <td class="tac_hiddencolumn2"><select name="asset type" size="1" id="161"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
+                <td class="tac_hiddencolumn3"><select name="asset type" size="1" id="171"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option></select></td>
+            </tr>
+                <tr>
+                    <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8" ><strong>Determination of Non-Exempt Equity</strong></td>
+                </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Full Fair Market Value of Asset:</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="221" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="231" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="241" value="0"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="251" value="0"></td>
+                <td class="tac_money tac_hiddencolumn2"><input type="text" class="tac_input" id="261" value="0"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="271" value="0"></td>
+                <td class="tac_money tac_readonly"><input type="text" id="281" value="0" readonly></td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Percentage of Ownership (%):</td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="222" value="0"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="232" value="0"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="242" value="0"></td>
+                <td class="tac_percentage tac_hiddencolumn1"><input type="text" class="tac_input" id="252" value="0"></td>
+                <td class="tac_percentage tac_hiddencolumn2"><input type="text" class="tac_input" id="262" value="0"></td>
+                <td class="tac_percentage tac_hiddencolumn3"><input type="text" class="tac_input" id="272" value="0"></td>
+                <td id=282 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Debtor's Actual Gross Interest:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="223" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="233" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="243" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="253" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="263" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="273" value="0" readonly ></td>
+                <td id=283 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Total of Valid & Secured Loans:</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="224" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="234" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="244" value="0"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="254" value="0"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="264" value="0"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="274" value="0"></td>
+                <td id=284 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Pro-rated Liens:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="225" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="235" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="245" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="255" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="265" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="275" value="0" readonly ></td>
+                <td id=285 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Debtor's Equity:</td>
+                <td class="tac_readonly" ><input type="text" class="tac_input" id="226" value="0" readonly ></td>
+                <td class="tac_readonly" ><input type="text" class="tac_input" id="236" value="0" readonly ></td>
+                <td class="tac_readonly" ><input type="text" class="tac_input" id="246" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1" ><input type="text" class="tac_input" id="256" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2" ><input type="text" class="tac_input" id="266" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3" ><input type="text" class="tac_input" id="276" value="0" readonly ></td>
+                <td class="tac_readonly" ><input type="text" class="tac_input" id="286" value="0" readonly ></td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8" ><strong>Determination and Application of Exemptions</strong></td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Type of Exemption:</td>
+                <td><input type="textarea" class="tac_input tac_text" id="321" ></td>
+                <td><input type="textarea" class="tac_input tac_text" id="331" ></td>
+                <td><input type="textarea" class="tac_input tac_text" id="341" ></td>
+                <td class="tac_hiddencolumn1" ><input type="textarea" class="tac_input tac_text" id="351" ></td>
+                <td class="tac_hiddencolumn2" ><input type="textarea" class="tac_input tac_text" id="361" ></td>
+                <td class="tac_hiddencolumn3" ><input type="textarea" class="tac_input tac_text" id="371" ></td>
+                <td id=381 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Amount of Exemption:</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="322" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="332" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="342" value="0"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="352" value="0"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="362" value="0"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="372" value="0"></td>
+                <td id=382 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Wildcard Exemption Used:</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="323" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="333" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="343" value="0"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="353" value="0"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="363" value="0"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="373" value="0"></td>
+                <td id=383 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Total of Exemptions Used:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="324" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="334" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="344" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="354" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="364" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="374" value="0" readonly ></td>
+                <td id=384 >N/A</td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8" ><strong>Calculation of Hypothetical Administrative Costs of Chapter 7 Trustee</strong></td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;" rowspan="5">Total Hyp. Ch 7. Trustee Fees:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="421" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="431" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="441" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="451" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="461" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="471" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="481" value="0" readonly ></td>
+            </tr>
+            <tr>
+                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, Under $5,000: 25% of Disbursement:</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, Between $5,000 & $50,000: 10% of (Disbursement minus $5,000) plus $1,250:</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, between $50,000 & 1,000,000: 5% of (Disbursement minus $50,000) plus $5,570:</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_adjustcolumn2" style="background-color: #b9c9fe;" colspan="7"><strong>Disbursement, Incl. Secured, $1,000,0000+: 3% of (Disbursement minus $1,000,000) plus $53,250:</strong></td>
+            </tr>
+            <tr>
+                <td  class=tac_heading3 style="background-color:#b9c9fe;" rowspan="2">Add. Hyp. Ch. 7 Admin Expenses:</td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="426" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="436" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="446" value="0"></td>
+                <td class="tac_money tac_hiddencolumn1" ><input type="text" class="tac_input" id="456" value="0"></td>
+                <td class="tac_money tac_hiddencolumn2" ><input type="text" class="tac_input" id="466" value="0"></td>
+                <td class="tac_money tac_hiddencolumn3" ><input type="text" class="tac_input" id="476" value="0"></td>
+                <td class="tac_money" ><input type="text" class="tac_input" id="486" value="0" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="7"  >This Estimate Includes attorney and other professional fees incurred for the benefit of the estate:</td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8" ><strong>Final Determination of Net Asset Values for Schedules A, B, and C</strong></td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Debtor's Actual Gross Interest:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="521" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="531" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="541" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="551" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="561" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="571" value="0" readonly ></td>
+                <td id=581 >N/A</td>
+
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Fees:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="522" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="532" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="542" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="552" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="562" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="572" value="0" readonly ></td>
+                <td id=581 >N/A</td>
+
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Percentage Cost of Sale:</td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="523" value="0"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="533" value="0"></td>
+                <td class="tac_percentage" ><input type="text" class="tac_input" id="543" value="0"></td>
+                <td class="tac_percentage tac_hiddencolumn1" ><input type="text" class="tac_input" id="553" value="0"></td>
+                <td class="tac_percentage tac_hiddencolumn2" ><input type="text" class="tac_input" id="563" value="0"></td>
+                <td class="tac_percentage tac_hiddencolumn3" ><input type="text" class="tac_input" id="573" value="0"></td>
+                <td class="tac_percentage" id=583 >N/A</td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Hypothetical Cost of Sale:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="524" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="534" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="544" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="554" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="564" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="574" value="0" readonly ></td>
+                <td id=584 >N/A</td>
+
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Final Value for Schedules:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="525" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="535" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="545" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="555" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="565" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="575" value="0" readonly ></td>
+                <td id=585 >N/A</td>
+
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Pro-Rated Liens:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="526" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="536" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="546" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="556" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="566" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="576" value="0" readonly ></td>
+                <td id=586 >N/A</td>
+
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Net Equity:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="527" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="537" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="547" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="557" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="567" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="577" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="587" value="0" readonly ></td>
+            </tr>
+            <tr>
+                <td class=tac_heading3 style="background-color:#b9c9fe;">Total Exemptions:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="528" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="538" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="548" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn1"><input type="text" class="tac_input" id="558" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn2"><input type="text" class="tac_input" id="568" value="0" readonly ></td>
+                <td class="tac_readonly tac_hiddencolumn3"><input type="text" class="tac_input" id="578" value="0" readonly ></td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="588" value="0" readonly ></td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8" ><strong>Minimum Distribution to Priority and General Unsecured Claims to Protect Non-Exempt Equity</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_adjustcolumn2" colspan="7" style="text-align: right;">Minimum Distribution to all Unsecured Claims:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="681" value="0" readonly ></td>
+            </tr>
+            <tr>
+                <td class="tac_adjustcolumn2" colspan="7" style="text-align: right;">Total Priority Claims (excluding attorney and Ch. 13 Trustee Fees):</td>
+                <td class="tac_money"><input type="text" class="tac_input" id="682" value="0"></td>
+            </tr>
+            <tr>
+                <td class="tac_adjustcolumn2" colspan="7" style="text-align: right;">Minimum Distribution to all Unsecured Claims:</td>
+                <td class="tac_readonly"><input type="text" class="tac_input" id="683" value="0" readonly ></td>
+            </tr>
+
+    </tbody>
+</table>
+<button class="tac_ButtonB" onclick="other_amount_input()">Calculate</button>
+<button class="tac_ButtonG" onclick="AddColumn()">Add Column +</button>
+<button class="tac_ButtonR" onclick="RemoveColumn()">Remove Collapse -</button>
+<button class="tac_ButtonGray" onclick="Reset()">Reset</button>
+<script>
+    collapse(); ///perform collapse as first step
+    add_format(); //format fields 
+
+   //Calculate Button 
+function other_amount_input() {
+    clean_numbers(); //convert formatted numbers (currency and percent) to normal values to calculate
+    calculate_values1(); // perform all calculations 
+    add_format(); //add formatting 
+} // end of Submit button 
+
+// perform maths
+function calculate_values1(){
+    //Box 261 - Sum of Fair Market Value
+    var fairmarketsum = parseFloat(document.getElementById("221").value) + parseFloat(document.getElementById("231").value) + parseFloat(document.getElementById("241").value) + parseFloat(document.getElementById("251").value) + parseFloat(document.getElementById("261").value) + parseFloat(document.getElementById("271").value);
+    document.getElementById("281").value = fairmarketsum ;
+    //Calculate Debtors Actual Gross 
+    var DAGI_ONE= parseFloat(document.getElementById("221").value) * (parseFloat(document.getElementById("222").value)/100);
+    document.getElementById("223").value = DAGI_ONE ;
+    document.getElementById("521").value = DAGI_ONE ;
+    var DAGI_TWO= parseFloat(document.getElementById("231").value) * (parseFloat(document.getElementById("232").value)/100);
+    document.getElementById("233").value = DAGI_TWO ;
+    document.getElementById("531").value = DAGI_TWO ;
+    var DAGI_THREE= parseFloat(document.getElementById("241").value) * (parseFloat(document.getElementById("242").value)/100);
+    document.getElementById("243").value = DAGI_THREE ;
+    document.getElementById("541").value = DAGI_THREE ;
+    var DAGI_FOUR= parseFloat(document.getElementById("251").value) * (parseFloat(document.getElementById("252").value)/100);
+    document.getElementById("253").value = DAGI_FOUR ;
+    document.getElementById("551").value = DAGI_FOUR ;
+    var DAGI_FIVE= parseFloat(document.getElementById("261").value) * (parseFloat(document.getElementById("262").value)/100);
+    document.getElementById("263").value = DAGI_FOUR ;
+    document.getElementById("561").value = DAGI_FOUR ;
+    var DAGI_SIX= parseFloat(document.getElementById("271").value) * (parseFloat(document.getElementById("272").value)/100);
+    document.getElementById("273").value = DAGI_FOUR ;
+    document.getElementById("571").value = DAGI_FOUR ;
+    //Calculate Pro-Rated Liens 
+    var PRL_ONE= parseFloat(document.getElementById("224").value) * (parseFloat(document.getElementById("222").value)/100);
+    document.getElementById("225").value = PRL_ONE ;
+    document.getElementById("526").value = PRL_ONE ;
+    var PRL_TWO= parseFloat(document.getElementById("234").value) * (parseFloat(document.getElementById("232").value)/100);
+    document.getElementById("235").value = PRL_TWO ;
+    document.getElementById("536").value = PRL_TWO ;
+    var PRL_THREE= parseFloat(document.getElementById("244").value) * (parseFloat(document.getElementById("242").value)/100);
+    document.getElementById("245").value = PRL_THREE ;
+    document.getElementById("546").value = PRL_THREE ;
+    var PRL_FOUR= parseFloat(document.getElementById("254").value) * (parseFloat(document.getElementById("252").value)/100);
+    document.getElementById("255").value = PRL_FOUR ;
+    document.getElementById("556").value = PRL_FOUR ;
+    var PRL_FIVE= parseFloat(document.getElementById("264").value) * (parseFloat(document.getElementById("262").value)/100);
+    document.getElementById("265").value = PRL_FOUR ;
+    document.getElementById("566").value = PRL_FOUR ;
+    var PRL_SIX= parseFloat(document.getElementById("274").value) * (parseFloat(document.getElementById("272").value)/100);
+    document.getElementById("275").value = PRL_FOUR ;
+    document.getElementById("576").value = PRL_FOUR ;
+
+    //Calculate Debtor's Equity (DAGI - Pro-Rated Leins)
+    var EQU_ONE= parseFloat(document.getElementById("223").value) - parseFloat(document.getElementById("225").value);
+    document.getElementById("226").value = EQU_ONE ;
+    var EQU_TWO= parseFloat(document.getElementById("233").value) - parseFloat(document.getElementById("235").value);
+    document.getElementById("236").value = EQU_TWO ;
+    var EQU_THREE= parseFloat(document.getElementById("243").value) - parseFloat(document.getElementById("245").value);
+    document.getElementById("246").value = EQU_THREE ;
+    var EQU_FOUR= parseFloat(document.getElementById("253").value) - parseFloat(document.getElementById("255").value);
+    document.getElementById("256").value = EQU_FOUR ;
+    var EQU_FIVE= parseFloat(document.getElementById("263").value) - parseFloat(document.getElementById("265").value);
+    document.getElementById("266").value = EQU_FOUR ;
+    var EQU_SIX= parseFloat(document.getElementById("273").value) - parseFloat(document.getElementById("275").value);
+    document.getElementById("276").value = EQU_FOUR ;
+    //SUM Debtor's Equity
+    var debtorequitysum = parseFloat(document.getElementById("226").value) + parseFloat(document.getElementById("236").value) + parseFloat(document.getElementById("246").value) + parseFloat(document.getElementById("256").value) + parseFloat(document.getElementById("266").value) + parseFloat(document.getElementById("276").value);
+    document.getElementById("286").value = debtorequitysum ;
+    //Sum Exemptions
+    var EXEM_ONE= parseFloat(document.getElementById("322").value) + parseFloat(document.getElementById("323").value);
+    document.getElementById("324").value = EXEM_ONE ;
+    document.getElementById("528").value = EXEM_ONE ;
+    var EXEM_TWO= parseFloat(document.getElementById("332").value) + parseFloat(document.getElementById("333").value);
+    document.getElementById("334").value = EXEM_TWO ;
+    document.getElementById("538").value = EXEM_TWO ;
+    var EXEM_THREE= parseFloat(document.getElementById("342").value) + parseFloat(document.getElementById("343").value);
+    document.getElementById("344").value = EXEM_THREE ;
+    document.getElementById("548").value = EXEM_THREE ;
+    var EXEM_FOUR= parseFloat(document.getElementById("352").value) + parseFloat(document.getElementById("353").value);
+    document.getElementById("354").value = EXEM_FOUR ;
+    document.getElementById("558").value = EXEM_FOUR ;
+    var EXEM_FIVE= parseFloat(document.getElementById("362").value) + parseFloat(document.getElementById("363").value);
+    document.getElementById("364").value = EXEM_FOUR ;
+    document.getElementById("568").value = EXEM_FOUR ;
+    var EXEM_SIX= parseFloat(document.getElementById("372").value) + parseFloat(document.getElementById("373").value);
+    document.getElementById("374").value = EXEM_FOUR ;
+    document.getElementById("578").value = EXEM_FOUR ;
+
+    //declare calulation variables 
+    var A1,L1,E1,A2,L2,E2,A3,L3,E3,A4,L4,E4,A5,L5,E5,A6,L6,E6,F1,F2,FFinal,FeeT1,FeeT2,FeeT3,AddT1,AddT2,AddT3,C1,C2,C3,P1,P2,P3;
+    FeeT1 = 5000;
+    FeeT2 = 50000;
+    FeeT3 = 1000000;
+    C1 = 5000; 
+    C2 = 50000;
+    C3 = 1000000;
+    AddT1 = 1250;
+    AddT2 = 5750;
+    AttT3 = 53250;
+    P1 = .25
+    P2 = .10
+    P3 = .05
+    P4 = .03
+
+    //Create variables for each set of Assets, Liens, and Equity total columns to use for calculation. 
+    A1 = parseFloat(document.getElementById("225").value);
+    L1 = parseFloat(document.getElementById("226").value);
+    E1 = parseFloat(document.getElementById("324").value);
+    A2 = parseFloat(document.getElementById("235").value);
+    L2 = parseFloat(document.getElementById("236").value);
+    E2 = parseFloat(document.getElementById("334").value);
+    A3 = parseFloat(document.getElementById("245").value);
+    L3 = parseFloat(document.getElementById("246").value);
+    E3 = parseFloat(document.getElementById("344").value);
+    A4 = parseFloat(document.getElementById("255").value);
+    L4 = parseFloat(document.getElementById("256").value);
+    E4 = parseFloat(document.getElementById("354").value);
+    A5 = parseFloat(document.getElementById("265").value);
+    L5 = parseFloat(document.getElementById("266").value);
+    E5 = parseFloat(document.getElementById("364").value);
+    A6 = parseFloat(document.getElementById("275").value);
+    L6 = parseFloat(document.getElementById("276").value);
+    E6 = parseFloat(document.getElementById("374").value);
+
+    //Run calculation for each asset and update Hypothetical Fees, Add hypothetical additional fees and update lower fees box
+    //Last 3 boxes are passed as element ID numbers for updating/calculating in the function 
+    hypotheticalcalc(A1,L1,E1,"421","426","522");
+    hypotheticalcalc(A2,L2,E2,"431","436","532");
+    hypotheticalcalc(A3,L3,E3,"441","446","542");
+    hypotheticalcalc(A4,L4,E4,"451","456","552");
+    hypotheticalcalc(A5,L5,E5,"461","466","562");
+    hypotheticalcalc(A6,L6,E6,"471","476","572");
+
+    
+function hypotheticalcalc(A,L,E,F1,F2,FFinal){
+                if ((A + L - E) < C1) {
+                    var result = (P1*(A+L-E))
+                    document.getElementById(F1).value = result;  
+                    document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
+                  //  return;   
+                }
+                else if (((A + L - E) >= C1) && ((A + L - E) < C2)) {
+                    var result = (AddT1 + (P2*(A1+L1-E1-FeeT1)))
+                    document.getElementById(F1).value = result;  
+                    document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
+                   // return;
+                }
+                else if (((A + L - E) >= C2) && ((A + L- E) < C3)) {
+                    var result = (AddT2 + (P3*(A+L-E-FeeT2)))
+                    document.getElementById(F1).value = result;  
+                    document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);   
+                   // return;
+                }
+                else if ((A + L - E) > C3) {
+                    var result = (AddT3 + (P4*(A+L-E-FeeT3)))
+                    document.getElementById(F1).value = result;  
+                    document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);   
+                  //  return;
+                }
+                else {
+                    document.getElementById(F1).value = "Invalid";
+                    document.getElementById(FFinal).value = "Invalid";
+                  //  return;
+
+                }
+    }
+
+    //Final Determination calculations 
+    //Cost of Sale
+    var COS_ONE= parseFloat(document.getElementById("521").value) * (parseFloat(document.getElementById("523").value)/100);
+    document.getElementById("524").value = COS_ONE ;
+    var COS_TWO= parseFloat(document.getElementById("531").value) * (parseFloat(document.getElementById("533").value)/100);
+    document.getElementById("534").value = COS_TWO ;
+    var COS_THREE= parseFloat(document.getElementById("541").value) * (parseFloat(document.getElementById("543").value)/100);
+    document.getElementById("544").value = COS_THREE ;
+    var COS_FOUR= parseFloat(document.getElementById("551").value) * (parseFloat(document.getElementById("553").value)/100);
+    document.getElementById("554").value = COS_FOUR ;
+    var COS_FIVE= parseFloat(document.getElementById("561").value) * (parseFloat(document.getElementById("563").value)/100);
+    document.getElementById("564").value = COS_FIVE ;
+    var COS_SIX= parseFloat(document.getElementById("571").value) * (parseFloat(document.getElementById("573").value)/100);
+    document.getElementById("574").value = COS_SIX ;
+    //Final Value for Schedules
+    var FVS_ONE= parseFloat(document.getElementById("521").value) - parseFloat(document.getElementById("522").value) - parseFloat(document.getElementById("524").value);
+    document.getElementById("525").value = FVS_ONE ;
+    var FVS_TWO= parseFloat(document.getElementById("531").value) - parseFloat(document.getElementById("532").value) - parseFloat(document.getElementById("534").value);
+    document.getElementById("535").value = FVS_TWO ;
+    var FVS_THREE= parseFloat(document.getElementById("541").value) - parseFloat(document.getElementById("542").value) - parseFloat(document.getElementById("544").value);
+    document.getElementById("545").value = FVS_THREE ;
+    var FVS_FOUR= parseFloat(document.getElementById("551").value) - parseFloat(document.getElementById("552").value) - parseFloat(document.getElementById("554").value);
+    document.getElementById("555").value = FVS_FOUR ;
+    var FVS_FIVE= parseFloat(document.getElementById("561").value) - parseFloat(document.getElementById("562").value) - parseFloat(document.getElementById("564").value);
+    document.getElementById("565").value = FVS_FIVE ;
+    var FVS_SIX= parseFloat(document.getElementById("571").value) - parseFloat(document.getElementById("572").value) - parseFloat(document.getElementById("574").value);
+    document.getElementById("575").value = FVS_SIX ;
+    //Net Equity
+    var NE_ONE= parseFloat(document.getElementById("226").value) - parseFloat(document.getElementById("522").value) - parseFloat(document.getElementById("524").value);
+    document.getElementById("527").value = NE_ONE ;
+    var NE_TWO= parseFloat(document.getElementById("236").value) - parseFloat(document.getElementById("532").value) - parseFloat(document.getElementById("534").value);
+    document.getElementById("537").value = NE_TWO ;
+    var NE_THREE= parseFloat(document.getElementById("246").value) - parseFloat(document.getElementById("542").value) - parseFloat(document.getElementById("544").value);
+    document.getElementById("547").value = NE_THREE ;
+    var NE_FOUR= parseFloat(document.getElementById("256").value) - parseFloat(document.getElementById("552").value) - parseFloat(document.getElementById("554").value);
+    document.getElementById("557").value = NE_FOUR ;
+    var NE_FIVE= parseFloat(document.getElementById("266").value) - parseFloat(document.getElementById("562").value) - parseFloat(document.getElementById("564").value);
+    document.getElementById("567").value = NE_FIVE ;
+    var NE_SIX= parseFloat(document.getElementById("276").value) - parseFloat(document.getElementById("572").value) - parseFloat(document.getElementById("574").value);
+    document.getElementById("577").value = NE_SIX ;
+    //Net Equity Sum 587
+    var netequitysum = NE_ONE + NE_TWO + NE_THREE + NE_FOUR + NE_FIVE + NE_SIX;
+    document.getElementById("587").value = netequitysum ;
+    //Total Exemption Sum
+    var totalexemptionsum = EXEM_ONE + EXEM_TWO + EXEM_THREE + EXEM_FOUR + EXEM_FIVE + EXEM_SIX;
+    document.getElementById("588").value = totalexemptionsum ; 
+    //hyptotehtical sum
+    var ch7hypotheticalsum = parseFloat(document.getElementById("421").value) + parseFloat(document.getElementById("431").value) + parseFloat(document.getElementById("441").value) + parseFloat(document.getElementById("451").value) + parseFloat(document.getElementById("461").value) + parseFloat(document.getElementById("471").value);
+    document.getElementById("481").value = ch7hypotheticalsum ;
+    //Additional hyptothetical sum
+    var ch7hypotheticalsumadd = parseFloat(document.getElementById("426").value) + parseFloat(document.getElementById("436").value) + parseFloat(document.getElementById("446").value) + parseFloat(document.getElementById("456").value) + parseFloat(document.getElementById("466").value) + parseFloat(document.getElementById("476").value);
+    document.getElementById("486").value = ch7hypotheticalsumadd ;
+    //Minimum Distribution to all Unsecured Claims:
+    var minimumdistro = (netequitysum - totalexemptionsum);
+    document.getElementById("681").value = minimumdistro;
+    //Minimum Distro General Unsecured
+    var minimumdistroGU = (minimumdistro - parseFloat(document.getElementById("682").value));
+    document.getElementById("683").value = minimumdistroGU;
+
+}
+
+//perform locale formatting 
+function add_format(){
+        $('.tac_money').find('input').each(function(){ // convert TextBox value to currency
+                        $(this).each(function() {
+                            if (!isNaN($(this).val().toString().replace(/[$,]+/g,"")) && $(this).val() != ''){ // remove '$' and ',' check if the value is a number
+                            $(this).val(tac_financial($(this).val())); // if the value is a number, convert it to currency format
+                            }
+                        });
+                    });
+
+        $('.tac_readonly').find('input').each(function(){ // convert TextBox value to currency
+            $(this).each(function() {
+                if (!isNaN($(this).val().toString().replace(/[$,]+/g,"")) && $(this).val() != ''){ // remove '$' and ',' check if the value is a number
+                $(this).val(tac_financial($(this).val())); // if the value is a number, convert it to currency format
+                }
+            });
+        });
+
+        // convert numbers entered into TextBox input fields to currency format. 
+        $('.tac_percentage').find('input').each(function(){ // convert TextBox value to currency
+            $(this).each(function() {
+                if (!isNaN($(this).val().toString().replace(/[%]+/g,"")) && $(this).val() != ''){ // remove '%' check if the value is a number
+                $(this).val(tac_percentage($(this).val())); // if the value is a number, convert it to currency format
+                }
+            });
+        });
+}
+
+//currency format
+function tac_financial(x) {
+    var num = Number(x.toString().replace(/[$,]+/g,""))
+    return num.toLocaleString('en-US', {style:'currency', currency:'USD'});
+    }
+
+//percent format 
+function tac_percentage(x) {
+    var num = Number(x.toString().replace(/[%,]+/g,""))
+    return parseFloat(num).toFixed(2)+"%";
+    }
+
+//remove all formats
+function clean_numbers(){
+       //Convert to plain numbers for calculations
+       $('.tac_money').find('input').each(function(){ // convert TextBox value to currency
+                        $(this).each(function() {
+                            if (!isNaN($(this).val().toString().replace(/[$,]+/g,"")) && $(this).val() != ''){ // remove '$' and ',' check if the value is a number
+                            $(this).val(remove_financial($(this).val())); // if the value is a number, convert it to currency format
+                            }
+                        });
+                    });
+
+
+$('.tac_readonly').find('input').each(function(){ // convert TextBox value to currency
+    $(this).each(function() {
+        if (!isNaN($(this).val().toString().replace(/[$,]+/g,"")) && $(this).val() != '')
+        { // remove '$' and ',' check if the value is a number
+            $(this).val(remove_financial($(this).val())); // if the value is currency format, convert it to plain number
+        }
+    });
+});
+
+// convert numbers entered into TextBox input fields to currency format. 
+$('.tac_percentage').find('input').each(function(){ // convert TextBox value to currency
+    $(this).each(function() {
+        if (!isNaN($(this).val().toString().replace(/[%]+/g,"")) && $(this).val() != '')
+        { // remove '%' check if the value is a number
+            $(this).val(remove_percentage($(this).val())); // if the value is percentage format, convert it to plain number
+        }
+    });
+});
+};
+
+//remove currency
+function remove_financial(x){
+    var dollarCurrenyValue = x
+return Number(dollarCurrenyValue.replace(/[^0-9.-]+/g,""));
+}
+
+//remove percent 
+function remove_percentage(x){
+    var dollarCurrenyValue = x
+return Number(dollarCurrenyValue.replace(/[^0-9.-]+/g,""));
+}
+
+function collapse() 
+{ //initial hide for columns 4,5,6 
+        $('.tac_hiddencolumn1').hide();
+        $('.tac_hiddencolumn2').hide();
+        $('.tac_hiddencolumn3').hide();
+        $('.tac_adjustcolumn').attr('colspan',5);
+        $('.tac_adjustcolumn2').attr('colspan',4);
+        $('.tac_adjustcolumn3').attr('colspan',3);
+        $('tac_ButtonR').hide();
+}
+
+var i;
+i = 3;
+console.log("i beginning=: " + i)
+function RemoveColumn() { // hide columns
+        if (i > 5) 
+        { //hide column 6
+            $('.tac_hiddencolumn3').hide();
+            $('.tac_adjustcolumn').attr('colspan',7);
+            $('.tac_adjustcolumn2').attr('colspan',6);
+            $('.tac_adjustcolumn3').attr('colspan',5); 
+            $('tac_ButtonG').show();
+            i = 5;
+        }
+    else if (i > 4 && i < 6 ) 
+        { //hide column 5
+            $('.tac_hiddencolumn2').hide();
+            $('.tac_adjustcolumn').attr('colspan',6);
+            $('.tac_adjustcolumn2').attr('colspan',5);
+            $('.tac_adjustcolumn3').attr('colspan',4); 
+            $('tac_ButtonG').show();
+            i = 4;
+        }
+    else if (i > 2 && i < 5 ) 
+        { //hide column 4
+            $('.tac_hiddencolumn1').hide();
+            $('.tac_adjustcolumn').attr('colspan',5);
+            $('.tac_adjustcolumn2').attr('colspan',4);
+            $('.tac_adjustcolumn3').attr('colspan',3);
+            $('tac_ButtonG').show();
+            $('tac_ButtonR').hide();
+            i = 3;
+        }
+    else
+        { //error minimum columns
+            alert("Maximum number of columns have been removed");
+            i = 3; 
+        }   
+
+        console.log("i =: " + i)
+
+}
+
+
+
+function AddColumn() 
+{
+    console.log("i at beginning of function" + i)
+    if (i <= 4) //when i = 3, show 4th column
+        {
+            $('.tac_hiddencolumn1').show();
+            $('.tac_adjustcolumn').attr('colspan',6);
+            $('.tac_adjustcolumn2').attr('colspan',5);
+            $('.tac_adjustcolumn3').attr('colspan',4); 
+            $('tac_ButtonR').show();
+            i = 5;
+            console.log("I ran i < 4");
+        }
+    else if (i > 3 && i <= 5 ) 
+        { //show 5th column 
+            $('.tac_hiddencolumn2').show();
+            $('.tac_adjustcolumn').attr('colspan',7);
+            $('.tac_adjustcolumn2').attr('colspan',6);
+            $('.tac_adjustcolumn3').attr('colspan',5); 
+            $('tac_ButtonR').show();
+            $('tac_ButtonG').hide();
+            i = 6
+            console.log("I ran i > 3 && i < 5 ");
+
+        }
+    else if (i > 5 && i <= 7 ) 
+        { //show 6th column
+            $('.tac_hiddencolumn3').show();
+            $('.tac_adjustcolumn').attr('colspan',8);
+            $('.tac_adjustcolumn2').attr('colspan',7);
+            $('.tac_adjustcolumn3').attr('colspan',6); 
+            $('tac_ButtonR').show();
+            i = 9;
+            console.log("I Ran i > 4 && i < 6 ")
+        }
+    else
+        { // error max columns reached 
+            alert("Maximum number of columns have been added");
+            $('tac_ButtonG').attr('visbility', 'hidden');
+        }   
+        console.log("i =: " + i)
+       // i++; 
+
+}
+
+function Reset() { //reset all fields
+            $('tac_money').val("0"); //set tac_money fields to 0
+            $('tac_percentage').val("0"); //set percentage fields to 0
+            $('tac_readonly').val("0"); //set tac_readonly fields to 0
+           // $('#321').value("");
+            add_format(); //format fields in correct locale
+            collapse(); //hide columns 4,5,6
+            i=3; // reset i back to 3 
+}
+
+
+</script>
+
+<!-- 
+    Current project Status: 
+    * Need to add notes
+    * Need to add 8% cost of sale if the drop down is house.
+    * Need to fix reset button
+    * Need to test in all browsers 
+-->

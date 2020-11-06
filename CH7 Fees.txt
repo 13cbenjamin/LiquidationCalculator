@@ -1,0 +1,27 @@
+Calculation REferences 
+
+SET @Balance = (CASE 
+                    WHEN @Equity1 - @Exemptions1 <= 0 THEN 0 
+                   
+                    WHEN @SecuredLoan + @Equity1 - @Exemptions1 < 5000 THEN (0.25*(@SecuredLoan+@Equity1-@Exemptions1))
+                    --Disbursement, incl. secured, between $5,000 & $50,000: 10% of (Disb. minus $5,000) plus $1,250) 
+                    WHEN @SecuredLoan + @Equity1 - @Exemptions1 >= 5000 AND @SecuredLoan + @Equity1 - @Exemptions1 < 50000 THEN 1250 + (0.1*(@SecuredLoan+@Equity1-@Exemptions1-5000))
+                    --Disbursement, incl. secured, between $50,000 & $1,000,000: 5% of (Disb. minus $50,000) plus $5,750) 
+                    WHEN @SecuredLoan + @Equity1 - @Exemptions1 >= 50000 AND @SecuredLoan + @Equity1 - @Exemptions1 < 1000000 THEN 5750 + (0.05*(@SecuredLoan+@Equity1-@Exemptions1-50000))
+                    --Disbursement, incl. secured, $1,000,000+: 3% of (Disb. minus $1,000,000) plus $53,250)
+                    WHEN @SecuredLoan + @Equity1 - @Exemptions1 >= 1000000 THEN 53250 + (0.03*(@SecuredLoan+@Equity1-@Exemptions1-1000000))     
+                END);
+
+
+
+
+ --Disbursement, incl. secured, under $5,000: 25% of Disb. 
+
+
+  --Disbursement, incl. secured, between $5,000 & $50,000: 10% of (Disb. minus $5,000) plus $1,250) 
+
+
+   --Disbursement, incl. secured, between $50,000 & $1,000,000: 5% of (Disb. minus $50,000) plus $5,750) 
+
+
+   --Disbursement, incl. secured, $1,000,000+: 3% of (Disb. minus $1,000,000) plus $53,250)

@@ -1,0 +1,27 @@
+if ((A1 + L1 - E1) < C1) {
+    var result = (P1*(A1+L1-E1))
+    document.getElementById("421").value = result;  
+    document.getElementById("522").value = result + parseFloat(document.getElementById("426").value);     
+}
+else if (((A1 + L1 - E1) >= C1) && ((A1 + L1 - E1) < C2)) {
+    var result = (AddT1 + (P2*(A1+L1-E1-FeeT1)))
+    document.getElementById("421").value = result;
+    document.getElementById("522").value = result + parseFloat(document.getElementById("426").value);     
+
+}
+else if (((A1 + L1 - E1) >= C2) && ((A1 + L1 - E1) < C3)) {
+    var result = (AddT2 + (P3*(A1+L1-E1-FeeT2)))
+    document.getElementById("421").value = result; 
+    document.getElementById("522").value = result + parseFloat(document.getElementById("426").value);     
+
+}
+else if ((A1 + L1 - E1) > C3) {
+    var result = (AddT3 + (P4*(A1+L1-E1-FeeT3)))
+    document.getElementById("421").value = result;  
+    document.getElementById("522").value = result + parseFloat(document.getElementById("426").value);     
+}
+else {
+    document.getElementById("421").value = "Invalid";
+    document.getElementById("522").value = "Invalid";
+
+}
