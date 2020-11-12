@@ -12,22 +12,12 @@
 
 <div id="instructions">
 <br>
+<a href="https://chapter13tacoma.org/wp-content/uploads/2020/11/Liquidation-Calculator-User-Guide.pdf">Click here for a full user guide</a>
 <ul>
     <li>To use this calculator complete all necessary fields then click <b>Calculate</b> or press <b>Enter</b> on your keyboard</li>
-    <li>The Add Column button will allow you to add up to 3 additional columns</li>
-    <li>The Remove Column can be used to remove added columns</li>
-    <li>You can click Save as PDF to create a copy</li>
     <li>Fields with <mark>Yellow</mark> are calculated values</li>
     <li>The Reset button can be used to reset the calculator</li>
     <li>Percentage Cost of Sale Trustee Default Values - 8.0% for Real Property, $200 each vehicle</li>
-    <li>Hypothetical Fees Calculation</li>
-    <ul>
-    <li>     Disbursement, Incl. Secured, Under $5,000: 25% of Disbursement</li>
-    <li>     Disbursement, Incl. Secured, Between $5,000 &amp; $50,000: 10% of (Disbursement minus $5,000) plus $1,250</li>
-    <li>     Disbursement, Incl. Secured, between $50,000 &amp; 1,000,000: 5% of (Disbursement minus $50,000) plus $5,570</li>
-    <li>     Disbursement, Incl. Secured, $1,000,0000+: 3% of (Disbursement minus $1,000,000) plus $53,250</li>
-    </ul>
-    <li>Additional Hypothetical Chapter 7 Administrative Expenses: This Estimate Includes attorney and other professional fees incurred for the benefit of the estate</li>
 </ul>
 <br>
 </div>
@@ -324,11 +314,11 @@ function calculate_values1(){
     document.getElementById("253").value = DAGI_FOUR ;
     document.getElementById("551").value = DAGI_FOUR ;
     var DAGI_FIVE= parseFloat(document.getElementById("261").value) * (parseFloat(document.getElementById("262").value)/100);
-    document.getElementById("263").value = DAGI_FOUR ;
-    document.getElementById("561").value = DAGI_FOUR ;
+    document.getElementById("263").value = DAGI_FIVE ;
+    document.getElementById("561").value = DAGI_FIVE ;
     var DAGI_SIX= parseFloat(document.getElementById("271").value) * (parseFloat(document.getElementById("272").value)/100);
-    document.getElementById("273").value = DAGI_FOUR ;
-    document.getElementById("571").value = DAGI_FOUR ;
+    document.getElementById("273").value = DAGI_SIX ;
+    document.getElementById("571").value = DAGI_SIX ;
     //Calculate Pro-Rated Liens 
     var PRL_ONE= parseFloat(document.getElementById("224").value) * (parseFloat(document.getElementById("222").value)/100);
     document.getElementById("225").value = PRL_ONE ;
@@ -343,11 +333,11 @@ function calculate_values1(){
     document.getElementById("255").value = PRL_FOUR ;
     document.getElementById("556").value = PRL_FOUR ;
     var PRL_FIVE= parseFloat(document.getElementById("264").value) * (parseFloat(document.getElementById("262").value)/100);
-    document.getElementById("265").value = PRL_FOUR ;
-    document.getElementById("566").value = PRL_FOUR ;
+    document.getElementById("265").value = PRL_FIVE ;
+    document.getElementById("566").value = PRL_FIVE ;
     var PRL_SIX= parseFloat(document.getElementById("274").value) * (parseFloat(document.getElementById("272").value)/100);
-    document.getElementById("275").value = PRL_FOUR ;
-    document.getElementById("576").value = PRL_FOUR ;
+    document.getElementById("275").value = PRL_SIX ;
+    document.getElementById("576").value = PRL_SIX ;
 
     //Calculate Debtor's Equity (DAGI - Pro-Rated Leins)
     var EQU_ONE= parseFloat(document.getElementById("223").value) - parseFloat(document.getElementById("225").value);
@@ -359,9 +349,9 @@ function calculate_values1(){
     var EQU_FOUR= parseFloat(document.getElementById("253").value) - parseFloat(document.getElementById("255").value);
     document.getElementById("256").value = EQU_FOUR ;
     var EQU_FIVE= parseFloat(document.getElementById("263").value) - parseFloat(document.getElementById("265").value);
-    document.getElementById("266").value = EQU_FOUR ;
+    document.getElementById("266").value = EQU_FIVE ;
     var EQU_SIX= parseFloat(document.getElementById("273").value) - parseFloat(document.getElementById("275").value);
-    document.getElementById("276").value = EQU_FOUR ;
+    document.getElementById("276").value = EQU_SIX ;
     //SUM Debtor's Equity
     var debtorequitysum = parseFloat(document.getElementById("226").value) + parseFloat(document.getElementById("236").value) + parseFloat(document.getElementById("246").value) + parseFloat(document.getElementById("256").value) + parseFloat(document.getElementById("266").value) + parseFloat(document.getElementById("276").value);
     document.getElementById("286").value = debtorequitysum ;
@@ -375,9 +365,9 @@ function calculate_values1(){
     var EXEM_FOUR= parseFloat(document.getElementById("352").value) + parseFloat(document.getElementById("353").value);
     document.getElementById("354").value = EXEM_FOUR ;
     var EXEM_FIVE= parseFloat(document.getElementById("362").value) + parseFloat(document.getElementById("363").value);
-    document.getElementById("364").value = EXEM_FOUR ;
+    document.getElementById("364").value = EXEM_FIVE ;
     var EXEM_SIX= parseFloat(document.getElementById("372").value) + parseFloat(document.getElementById("373").value);
-    document.getElementById("374").value = EXEM_FOUR ;
+    document.getElementById("374").value = EXEM_SIX ;
 
     } catch (error) {
         console.lol("Error: " + error)
@@ -601,8 +591,17 @@ document.getElementById("578").value = parseFloat(document.getElementById("374")
         //Minimum Distribution to all Unsecured Claims:
         var totalexemptionsum = parseFloat(document.getElementById("528").value)  + parseFloat(document.getElementById("538").value)  + parseFloat(document.getElementById("548").value)  + parseFloat(document.getElementById("558").value)  + parseFloat(document.getElementById("568").value)  + parseFloat(document.getElementById("578").value) ;
     document.getElementById("588").value = totalexemptionsum ; 
+    
         var minimumdistro = (netequitysum - totalexemptionsum);
-    document.getElementById("681").value = minimumdistro;
+        //Check if negative (less than zero) show 0, else show number. 
+    if (minimumdistro > 0) { 
+        document.getElementById("681").value = minimumdistro;
+       // alert("minimum distro: " + minimumdistro)
+    }
+    else { 
+        document.getElementById("681").value = 0;
+    }
+
 
     
 } catch (error) {
