@@ -283,24 +283,19 @@
 
 
 <script>
-    collapse(); ///perform collapse as first step
-    add_format(); //format fields 
+    collapse(); 
+    add_format(); 
 
-   //Calculate Button 
 function other_amount_input() {
-    clean_numbers(); //convert formatted numbers (currency and percent) to normal values to calculate
-    calculate_values1(); // perform all calculations 
-    add_format(); //add formatting 
-} // end of Submit button 
+    clean_numbers(); 
+    calculate_values1();  
+    add_format(); 
+} 
 
-// perform maths
 function calculate_values1(){
-    //Try Initial Calculations 
     try {
-        //Box 261 - Sum of Fair Market Value
     var fairmarketsum = parseFloat(document.getElementById("221").value) + parseFloat(document.getElementById("231").value) + parseFloat(document.getElementById("241").value) + parseFloat(document.getElementById("251").value) + parseFloat(document.getElementById("261").value) + parseFloat(document.getElementById("271").value);
     document.getElementById("281").value = fairmarketsum ;
-    //Calculate Debtors Actual Gross 
     var DAGI_ONE= parseFloat(document.getElementById("221").value) * (parseFloat(document.getElementById("222").value)/100);
     document.getElementById("223").value = DAGI_ONE ;
     document.getElementById("521").value = DAGI_ONE ;
@@ -439,50 +434,26 @@ function hypotheticalcalc(A,L,E,F1,F2,FFinal){
                     var result = (P1*(A+L-E))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
-                  //console.log("Ran (A + L -E) < C1")
-                  //console.log("A: " + A)
-                  //console.log("L: " + L)  
-                  //console.log("E: " + E)  
-                  //console.log("C1: " + C1)  
 
                 }
                 else if (((A + L - E) >= C1) && ((A + L - E) < C2)) {
                     var result = (AddT1 + (P2*(A+L-E-FeeT1)))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
-                   // document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);  
-                  //console.log("Ran ((A + L - E) >= C1) && ((A + L - E) < C2)")
-                  //console.log("A: " + A)
-                  //console.log("L: " + L)  
-                  //console.log("E: " + E)  
-                  //console.log("C1: " + C1)  
-                  //console.log("C2: " + C2)  
                 }
                 else if (((A + L - E) >= C2) && ((A + L- E) < C3)) {
                     var result = (AddT2 + (P3*(A+L-E-FeeT2)))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);   
-                //console.log("Ran ((A + L - E) >= C2) && ((A + L- E) < C3)")
-                  //console.log("A: " + A)
-                  //console.log("L: " + L)  
-                  //console.log("E: " + E)  
-                  //console.log("C2: " + C2)  
-                  //console.log("C3: " + C3) 
                 }
                 else if ((A + L - E) > C3) {
                     var result = (AddT3 + (P4*(A+L-E-FeeT3)))
                     document.getElementById(F1).value = result;  
                     document.getElementById(FFinal).value = result + parseFloat(document.getElementById(F2).value);   
-                //console.log("Ran (A + L -E) > C3")
-                  //console.log("A: " + A)
-                  //console.log("L: " + L)  
-                  //console.log("E: " + E)  
-                  //console.log("C3: " + C1) 
                 }
                 else {
                     document.getElementById(F1).value = "Invalid";
                     document.getElementById(FFinal).value = "Invalid";
-                  //  return;
 
                 }
     }
