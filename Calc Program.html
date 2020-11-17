@@ -8,6 +8,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
 
 <div id="instructions">
@@ -42,7 +48,7 @@
                 <td class="tac_hiddencolumn1"><select class="asset4" name="asset type" size="1" id="151" tabindex="40"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
                 <td class="tac_hiddencolumn2"><select class="asset5" name="asset type" size="1" id="161" tabindex="50"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
                 <td class="tac_hiddencolumn3"><select class="asset6" name="asset type" size="1" id="171" tabindex="60"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
-                <td class="tac_money" valign="center"><strong>TOTALS</strong></td>
+                <td class="tac_total" valign="center"><strong>TOTALS</strong></td>
             </tr>
                 <tr>
                     <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Determination of Non-Exempt Equity</strong></td>
@@ -65,7 +71,7 @@
                 <td class="tac_percentage tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="252" value="0" tabindex="42"></td>
                 <td class="tac_percentage tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="262" value="0" tabindex="52"></td>
                 <td class="tac_percentage tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="272" value="0" tabindex="62"></td>
-                <td id="282"></td>
+                <td rowspan="4" class="tac_total"id="282"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Debtor's Actual Gross Interest:</td>
@@ -75,7 +81,6 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="253" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="263" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="273" value="0" readonly=""></td>
-                <td id="283"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Total of Valid &amp; Secured Loans:</td>
@@ -85,7 +90,6 @@
                 <td class="tac_money tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="254" value="0" tabindex="43"></td>
                 <td class="tac_money tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="264" value="0" tabindex="53"></td>
                 <td class="tac_money tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="274" value="0" tabindex="63"></td>
-                <td id="284"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Pro-rated Liens:</td>
@@ -95,7 +99,6 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="255" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="265" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="275" value="0" readonly=""></td>
-                <td id="285"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Debtor's Equity:</td>
@@ -118,7 +121,7 @@
                 <td class="tac_hiddencolumn1 tac_text"><input type="textarea" size="10" class="tac_input tac_text" id="351" tabindex="44"></td>
                 <td class="tac_hiddencolumn2 tac_text"><input type="textarea" size="10" class="tac_input tac_text" id="361" tabindex="54"></td>
                 <td class="tac_hiddencolumn3 tac_text"><input type="textarea" size="10" class="tac_input tac_text" id="371" tabindex="64"></td>
-                <td id="381"></td>
+                <td rowspan="4" class="tac_total" id="381"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Amount of Exemption:</td>
@@ -128,7 +131,6 @@
                 <td class="tac_money tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="352" value="0" tabindex="45"></td>
                 <td class="tac_money tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="362" value="0" tabindex="55"></td>
                 <td class="tac_money tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="372" value="0" tabindex="65"></td>
-                <td id="382"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Wildcard Exemption Used:</td>
@@ -138,7 +140,6 @@
                 <td class="tac_money tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="353" value="0" tabindex="46"></td>
                 <td class="tac_money tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="363" value="0" tabindex="56"></td>
                 <td class="tac_money tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="373" value="0" tabindex="66"></td>
-                <td id="383"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Total of Exemptions Used:</td>
@@ -148,7 +149,6 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="354" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="364" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="374" value="0" readonly=""></td>
-                <td id="384"></td>
             </tr>
             <tr>
                 <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Calculation of Hypothetical Administrative Costs of Chapter 7 Trustee</strong></td>
@@ -184,7 +184,7 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="551" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="561" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="571" value="0" readonly=""></td>
-                <td id="581"></td>
+                <td rowspan="6" class="tac_total" id="581"></td>
 
             </tr>
             <tr>
@@ -195,7 +195,6 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="552" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="562" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="572" value="0" readonly=""></td>
-                <td id="582"></td>
 
             </tr>
             <tr>
@@ -206,7 +205,6 @@
                 <td class="tac_percentage tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="553" value="0" tabindex="48"></td>
                 <td class="tac_percentage tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="563" value="0" tabindex="58"></td>
                 <td class="tac_percentage tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="573" value="0" tabindex="68"></td>
-                <td class="tac_percentage" id="583"></td>
             </tr>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe;">Hypothetical Cost of Sale:</td>
@@ -216,7 +214,6 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="554" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="564" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="574" value="0" readonly=""></td>
-                <td id="584"></td>
 
             </tr>
             <tr>
@@ -227,7 +224,6 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="555" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="565" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="575" value="0" readonly=""></td>
-                <td id="585"></td>
 
             </tr>
             <tr>
@@ -238,7 +234,6 @@
                 <td class="tac_readonly tac_hiddencolumn1"><input type="text" size="10" class="tac_input" id="556" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn2"><input type="text" size="10" class="tac_input" id="566" value="0" readonly=""></td>
                 <td class="tac_readonly tac_hiddencolumn3"><input type="text" size="10" class="tac_input" id="576" value="0" readonly=""></td>
-                <td id="586"></td>
 
             </tr>
             <tr>
@@ -265,18 +260,18 @@
                 <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Minimum Distribution to Priority and General Unsecured Claims to Protect Non-Exempt Equity</strong></td>
             </tr>
             <tr>
-                <td class="tac_adjustcolumn2" colspan="7" style="text-align: right;">Minimum Distribution to all Unsecured Claims:</td>
-                <td class="tac_readonly"><input type="text" size="10" class="tac_input" id="681" value="0" readonly=""></td>
+                <td class="tac_heading3 tac_adjustcolumn2" colspan="7" style="text-align: right;background-color:#b9c9fe;">Minimum Distribution to all Unsecured Claims:</td>
+                <td class="tac_money tac_readonly"><input type="text" size="10" class="tac_input" id="681" value="0" readonly=""></td>
             </tr>
     </tbody>
 </table>
 </div>
 <div id="buttons">
-<button class="tac_ButtonB" onclick="other_amount_input()" tabindex="80">Calculate</button>
-<button class="tac_ButtonG" onclick="AddColumn()" tabindex="81">Add Column +</button>
-<button class="tac_ButtonR" onclick="RemoveColumn()" tabindex="82">Remove Column -</button>
-<button class="tac_ButtonGray" onclick="Reset()" tabindex="83">Reset</button>
-<button class="tac_ButtonOrangeRed" id="export" onclick="generate()">Save As PDF</button>
+    <button class="btn btn-primary" onclick="other_amount_input()" tabindex="80">Calculate</button>
+    <button class="btn btn-success" onclick="AddColumn()" tabindex="81">Add Column +</button>
+    <button class="btn btn-danger" onclick="RemoveColumn()" tabindex="82">Remove Column -</button>
+    <button class="btn btn-secondary" onclick="Reset()" tabindex="83">Reset</button>
+    <button class="btn btn-warning" id="export" onclick="generate()">Save As PDF</button>
 </div>
 
 
