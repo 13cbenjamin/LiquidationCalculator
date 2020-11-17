@@ -1,0 +1,341 @@
+/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/
+/* site title and subtitle */
+.site-description {
+    font-style: normal;
+    font-size: 2em;
+    margin-top: 0;
+}
+table tbody > tr:nth-child(odd) > td {
+	
+}
+/*
+.header-image-wrapper:after{
+    content:"Photo by Travel Tacoma and Pierce County \A www.traveltacoma.com";
+    font-size: .65em;
+    display: block;
+    white-space: pre;
+    padding-left:10px;
+}
+*/
+/* second site subtitle */
+.site-description:after {
+    content: "Western District of Washington, Tacoma/Vancouver Division";
+    font-size: .65em;
+    display: block;
+}
+
+.main-navigation{
+    font-size:1.2em;
+}
+
+.widget_text h1 {
+    font-size:1em;
+    font-family:Playfair Display,serif;
+}
+
+.widget_text p {
+    margin-top:0;
+    font-family:Georgia,serif;
+}
+
+.widget_contact_info h1 {
+    font-size:1em;
+    font-family:Playfair Display,serif;
+}
+
+.widget_contact_info a {
+    font-family:Georgia,serif;
+}
+
+.widget_pages h1 {
+    font-size:1em;
+    font-family:Playfair Display,serif;
+    color:#111111;
+}
+
+.widget_pages a {
+    font-family:Georgia,serif;
+}
+
+.widget{
+    margin:0;
+}
+
+.widget + .widget {
+    margin-top:0;
+    padding-top:10px;
+}
+/* Move content area down from the default position which is -120px*/
+.content-area{
+    margin-top:-50px;
+}
+.site-content{
+	padding-top:10px;
+}
+.site-main{
+	margin-top:60px;
+}
+
+/* remove title from home page */
+.post-2 .entry-title{
+    display: none;
+}
+
+/* adjust header margin-top on pages */
+.entry-header + .entry-content {
+    margin-top: 0;
+}
+
+/* remove title from forms page */
+.post-299 .entry-title{
+    display: none;
+}
+
+/* adjust margin-top on pages with h5 */
+.entry-content h5 {
+    margin-top:0;
+}
+
+/* link decorations */
+.widget.widget_text a {
+    color: blue;
+    text-decoration: none;
+}
+
+.widget.widget_text a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.entry-content a {
+    color: blue;
+    text-decoration: none;
+}
+
+.entry-content a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* site footer */
+.site-info:after {
+    content: "Copyright Michael G. Malaier, Chapter 13 Standing Trustee- All rights reserved. \A The information contained on this site is intended for informational purposes only and should not be construed as constituting legal advice";
+    display: block;
+    white-space: pre;
+    font-family:Playfair Display,serif;
+    font-weight:normal;
+}
+
+.tbl {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tac_readonly input{
+    background-color:rgb(245, 245, 132);
+	padding: 0;
+	height: auto;
+	border: none;
+		
+}
+
+.tac_total {
+    background-color: white;
+}
+
+.tac_ButtonB {
+	display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: blue;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+	text-align: center;
+}
+
+.tac_ButtonG { 
+ display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: green;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+	text-align: center
+}
+
+.tac_ButtonR { 
+display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: red;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+	text-align: center;
+}
+
+
+.tac_ButtonGray { 
+display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: gray;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+	text-align: center;
+	vertical-align: center;
+}
+
+.tablecontent {
+	background: white;
+}
+
+.tac_ButtonOrangeRed { 
+display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: orangered;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+	text-align: center;
+	vertical-align: center;
+}
+
+.tac_table {
+    display: table;
+	  padding: 0;
+}
+
+.select {
+	width: 100%;
+}
+
+.tac_table tbody th {
+    display: table-row;
+		padding: 0;
+		 white-space: nowrap; 
+		
+}
+
+input[type="text"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], textarea {
+    min-width: 100px;
+		width: 100%;
+	
+}
+
+.tac_table tbody tr {
+    display: table-row;
+		padding: 0;
+		border: 1;
+		border-style: solid;
+		color: black;
+		background-color: lightgray;
+}
+
+.tac_table tbody td {
+	display: table-cell;
+	padding: 0;
+	border: 1;
+	border-style: solid;
+	color: black;
+	width: 125px;
+	 white-space: nowrap; 
+}
+
+.tac_heading3 {
+	font-weight: bold;
+	width: 275px;
+
+}
+
+.tac_heading2 {
+	border: 1;
+	border-style: solid;
+	border-color:black;
+	text-align: center;
+}
+
+.tac_heading {
+	font-size: 18px;
+	font-style: bold;
+	border: none;
+	text-align: center;
+	background-color: lightgray;
+}
+
+.tac_money input {
+	padding: 0;
+	height: auto;
+	border: 1;
+
+	
+}
+
+.tac_input {
+	width: 100%;
+	height: 100%;
+}
+
+.tac_percentage input {
+	padding: 0;
+	height: auto;
+	border: 1;
+	border-style: solid
+}
+
+.tbl-row {
+    display: table-row;
+		padding: 0;
+}
+
+.tbl-cell, .tbl-head {
+    display: table-cell;
+    padding: 0;
+    border: 0;
+}
+
+.tbl-head {
+    font-weight: bold;
+}
+
+.tac-style-ul li:before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f1c1";
+    padding-right: 5px;
+}
+
+.bg-image {
+    background-size: auto;
+	  background-repeat: no-repeat;
+    background-position: center;
+	  max-width:1200px;
+	  margin:auto;
+}
+.header-image {
+	max-height: 400px;
+}
