@@ -1,0 +1,265 @@
+<!--#########################################################################################################
+// Created by Chris Benjamin - IT Manager - CH13 Trustee office of Michael G. Malaier
+// Copyright 2020 - Chris Benjamin. Do not re-use without written permission (info@chapter13tacoma.org)
+// Created as public use calculator by attorneys to view liquidation calculations 
+// Trustee office implies no warranty as to the accuracy of calculations, use for approximation only
+//#########################################################################################################-->
+
+
+
+<div id="instructions">
+<br>
+<a href="https://chapter13tacoma.org/wp-content/uploads/2020/11/Liquidation-Calculator-User-Guide.pdf">Click here for a full user guide</a>
+<ul>
+    <li>To use this calculator complete all necessary fields then click <b>Calculate</b> or press <b>Enter</b> on your keyboard</li>
+    <li>Fields with <mark>Yellow</mark> are calculated values</li>
+    <li>The Reset button can be used to reset the calculator</li>
+    <li>Percentage Cost of Sale Trustee Default Values - 8.0% for Real Property, $200 each vehicle</li>
+</ul>
+<br>
+</div>
+<div id="tablecontent">
+
+<table class="table table-bordered" id="MyTable">
+    
+    <thead>
+        <tr><th class="tac_heading" colspan="8">Chapter 13 Calculation of Minimum Distribution to Unsecured Claims to Protect Non-Exempt Assets</th>
+    </tr></thead>
+    <tbody>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Type of Asset:</td>
+                <td><select class="asset1" name="asset type" size="1" id="121" tabindex="10"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td><select class="asset2" name="asset type" size="1" id="131" tabindex="20"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td><select class="asset3" name="asset type" size="1" id="141" tabindex="30"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn1"><select class="asset4" name="asset type" size="1" id="151" tabindex="40"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn2"><select class="asset5" name="asset type" size="1" id="161" tabindex="50"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn3"><select class="asset6" name="asset type" size="1" id="171" tabindex="60"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_total" valign="center"><strong>TOTALS</strong></td>
+            </tr>
+                <tr>
+                    <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Determination of Non-Exempt Equity</strong></td>
+                </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Full Fair Market Value of Asset:</td>
+                <td class="tac_money">[TextBox^Money^*101*221.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*231.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*241.150]</td>
+                <td class="tac_money tac_hiddencolumn1">[TextBox^Money^*101*251.150]</td>
+                <td class="tac_money tac_hiddencolumn2">[TextBox^Money^*101*261.150]</td>
+                <td class="tac_money tac_hiddencolumn3">[TextBox^Money^*101*271.150]</td>
+                <td class="tac_money tac_readonly bg-warning">[TextBox^Money^*101*281.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Percentage of Ownership (%):</td>
+                <td class="tac_percentage">[TextBox^Numbers^*101*222.150]</td>
+                <td class="tac_percentage">[TextBox^Numbers^*101*232.150]</td>
+                <td class="tac_percentage">[TextBox^Numbers^*101*242.150]</td>
+                <td class="tac_percentage tac_hiddencolumn1">[TextBox^Numbers^*101*252.150]</td>
+                <td class="tac_percentage tac_hiddencolumn2">[TextBox^Numbers^*101*262.150]</td>
+                <td class="tac_percentage tac_hiddencolumn3">[TextBox^Numbers^*101*272.150]</td>
+                <td rowspan="4" class="tac_total"id="282"></td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Debtor's Actual Gross Interest:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*223.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*233.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*243.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*253.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*263.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*273.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Total of Valid and Secured Loans:</td>
+                <td class="tac_money">[TextBox^Money^*101*224.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*234.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*244.150]</td>
+                <td class="tac_money tac_hiddencolumn1">[TextBox^Money^*101*254.150]</td>
+                <td class="tac_money tac_hiddencolumn2">[TextBox^Money^*101*264.150]</td>
+                <td class="tac_money tac_hiddencolumn3">[TextBox^Money^*101*274.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Pro-rated Liens:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*225.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*235.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*245.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*255.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*265.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*275.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Debtor's Equity:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*226.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*236.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*246.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*256.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*266.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*276.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*286.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Determination and Application of Exemptions</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Type of Exemption:</td>
+                <td class="">[CommentBox321.150]</td>
+                <td class="">[CommentBox331.150]</td>
+                <td class="">[CommentBox341.150]</td>
+                <td class="tac_hiddencolumn1">[CommentBox351.150]</td>
+                <td class="tac_hiddencolumn2">[CommentBox361.150]</td>
+                <td class="tac_hiddencolumn3">[CommentBox371.150]</td>
+                <td rowspan="3" class="tac_total" id="381"></td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Amount of Exemption:</td>
+                <td class="tac_money">[TextBox^Money^*101*322.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*332.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*342.150]</td>
+                <td class="tac_money tac_hiddencolumn1">[TextBox^Money^*101*352.150]</td>
+                <td class="tac_money tac_hiddencolumn2">[TextBox^Money^*101*362.150]</td>
+                <td class="tac_money tac_hiddencolumn3">[TextBox^Money^*101*372.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Wildcard Exemption Used:</td>
+                <td class="tac_money">[TextBox^Money^*101*323.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*333.150]</td>
+                <td class="tac_money">[TextBox^Money^*101*343.150]</td>
+                <td class="tac_money tac_hiddencolumn1">[TextBox^Money^*101*353.150]</td>
+                <td class="tac_money tac_hiddencolumn2">[TextBox^Money^*101*363.150]</td>
+                <td class="tac_money tac_hiddencolumn3">[TextBox^Money^*101*373.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Total of Exemptions Used:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*324.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*334.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*344.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*354.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*364.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*374.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*384.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Calculation of Hypothetical Administrative Costs of Chapter 7 Trustee</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Total Hyp. Ch 7. Trustee Fees:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*421.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*431.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*441.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*451.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*461.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*471.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*481.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Add. Hyp. Ch. 7 Admin Expenses:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*426.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*436.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*446.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*456.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*466.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*476.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*486.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Final Determination of Net Asset Values for Schedules A, B, and C</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Debtor's Actual Gross Interest:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*521.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*531.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*541.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*551.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*561.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*571.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*581.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Fees:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*522.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*532.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*542.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*552.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*562.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*572.150]</td>
+                <td rowspan="5"></td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Percentage Cost of Sale:</td>
+                <td class="tac_percentage">[TextBox^Numbers^*101*523.150]</td>
+                <td class="tac_percentage">[TextBox^Numbers^*101*533.150]</td>
+                <td class="tac_percentage">[TextBox^Numbers^*101*543.150]</td>
+                <td class="tac_percentage tac_hiddencolumn1">[TextBox^Numbers^*101*553.150]</td>
+                <td class="tac_percentage tac_hiddencolumn2">[TextBox^Numbers^*101*563.150]</td>
+                <td class="tac_percentage tac_hiddencolumn3">[TextBox^Numbers^*101*573.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Hypothetical Cost of Sale:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*524.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*534.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*544.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*554.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*564.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*574.150]</td>
+
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Final Value for Schedules:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*525.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*535.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*545.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*555.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*565.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*575.150]</td>
+
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Pro-Rated Liens:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*526.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*536.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*546.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*556.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*566.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*576.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Net Equity:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*527.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*537.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*547.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*557.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*567.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*577.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*587.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading3" style="background-color:#b9c9fe;">Total Exemptions:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*528.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*538.150]</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*548.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn1">[TextBox^Money^*101*558.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn2">[TextBox^Money^*101*568.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*578.150]</td>
+                <td class="tac_readonly bg-warning tac_hiddencolumn3">[TextBox^Money^*101*588.150]</td>
+            </tr>
+            <tr>
+                <td class="tac_heading2 tac_adjustcolumn" style="background-color: #E2E2E2;" colspan="8"><strong>Minimum Distribution to Priority and General Unsecured Claims to Protect Non-Exempt Equity</strong></td>
+            </tr>
+            <tr>
+                <td class="tac_heading3 tac_adjustcolumn2" colspan="7" style="text-align: right;background-color:#b9c9fe;">Minimum Distribution to all Unsecured Claims:</td>
+                <td class="tac_readonly bg-warning">[TextBox^Money^*101*681.150]</td>
+                
+            </tr>
+    </tbody>
+</table>
+</div>
+<div id="buttons">
+    <button class="btn btn-primary" onclick="other_amount_input()" tabindex="80">Calculate</button>
+    <button class="btn btn-success" onclick="AddColumn()" tabindex="81">Add Column +</button>
+    <button class="btn btn-danger" onclick="RemoveColumn()" tabindex="82">Remove Column -</button>
+    <button class="btn btn-secondary" onclick="Reset()" tabindex="83">Reset</button>
+    <button class="btn btn-warning" id="export" onclick="generate()">Save As PDF</button>
+</div>
+
+
+
+
