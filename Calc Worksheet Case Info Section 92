@@ -1,0 +1,61 @@
+<div style="background-color:#FFFFFF; width: 100%; padding: 0 0 10 0;">
+<div id="header_90_1" style="background-color:#D8D8D8; height: 28px; width: 100%;">
+<ul style="margin: 10; padding: 0; list-style-type: none; color:#000000;">
+    <li style="display: inline; float: left; font-size: 150%; font-weight: bold;">Case Information</li>
+    <li id="V1" style="display: inline; float: left; font-size: 150%; font-weight: bold;"></li>
+</ul> 
+</div>
+<div style="padding: 0 10 0 10;">
+<p style="clear: both;"></p>
+
+<table class="dataTable" width=auto bordercolor="#111111" style="border-collapse: collapse;" cellpadding=4 cellspacing=2 bgcolor=FFFFFF> 
+  
+    <tr> 
+        <td class="tRowClr2">Case Number:</td> 
+        <td class="tRowClr2">{vwCRMainCase.DisplayCaseNumber}</td> 
+        <td class="tRowClr2">Debtor 1:</td> 
+        <td class="tRowClr2">{vwCRMainCase.Deb1LongName}</td> 
+        <td class="tRowClr2">Entitled to Discharge:</td> 
+        <td class="tRowClr2">{vwCRMainCase.DebtorEntitledToDischargeDescription}</td> 
+        <td class="tRowClr2">Petition Filed Date:</td> 
+        <td class="tRowClr2">{vwCRMainCase.PetitionFiledDate@}</td> 
+    </tr> 
+
+    <tr> 
+        <td class="tRowClrGray">Division:</td> 
+        <td class="tRowClrGray">{vwCRMainCase.DivisionDescription}</td> 
+        <td class="tRowClrGray">Debtor 2:</td> 
+        <td class="tRowClrGray">{vwCRMainCase.Deb2LongName}</td> 
+        <td class="tRowClrGray">Entitled to Discharge:</td> 
+        <td class="tRowClrGray">{vwCRMainCase.DebtorEntitledToDischarge0Description}</td> 
+        <td class="tRowClrGray">First Meeting Date:</td> 
+        <td class="tRowClrGray">{vwCRMainCase.FirstMeetingDate@} {vwCRMainCase.FirstMeetingDate@t}</td> 
+    </tr> 
+  
+    <tr> 
+        <td class="tRowClr2">Plan Length:</td> 
+        <td class="tRowClr2">{vwCRMainCase.ProposedLengthOfPlan}&nbsp;<b>Months</b></td> 
+        <td class="tRowClr2">Attorney:</td> 
+        <td class="tRowClr2">{vwCRMainCase.AttyLongName}</td> 
+        <td class="tRowClr2"></td> 
+        <td class="tRowClr2"></td> 
+        <td class="tRowClr2">Confirmation Hearing Date:</td> 
+        <td class="tRowClr2">{vwCRMainCase.ConfirmationHearingDate@} {vwCRMainCase.ConfirmationHearingDate@t}</td>   
+ </tr> 
+  
+    <tr> 
+        <td class="tRowClrGray">ACP:</td> 
+        <td class="tRowClrGray">{vwCRMainCase.ApplicableCommitmentPeriod}&nbsp;<b>Months</b></td> 
+        <td class="tRowClrGray">Case Admin:</td> 
+        <td class="tRowClrGray"><b><font size=2>|~SELECT FirstName AS FieldData FROM tblCaseData INNER JOIN tblUserTable ON tblCaseData.CaseAdministrator = tblUserTable.UserCodeID WHERE CaseNumber = '{CaseNumber}'~|</font></b></td> 
+        <td class="tRowClrGray"></td> 
+        <td class="tRowClrGray"></td> 
+        <td class="tRowClrGray"></td> 
+        <td class="tRowClrGray"></td> 
+     </tr> 
+   
+</table>
+<br />
+Reviewed By: <b>|:UserName:|</b>  Last Revised: <b>|:ShortDate:|</b>
+</div>
+</div>

@@ -1,10 +1,12 @@
-<div id="instructions_worksheet_193">
+<div id="instructions_worksheet_93">
     <h5>Calculator Instructions:</h5>
 <ul>
     <li>To use this calculator complete all necessary fields, values will calculate automatically or you can click Re-Calculate</li>
     <li>Fields with <mark>Yellow</mark> are calculated values</li>
     <li>The Reset button can be used to reset the calculator</li>
     <li>Percentage Cost of Sale Trustee Default Values - 8.0% for Real Property, $200 each vehicle</li>
+    <li>You must click "Final Calculate Before Snap" before creating snapshot</li>
+    <li>Final Calculate will take about 10 seconds and you will get a message when it's complete</li>
 </ul>
 <br>
 </div>
@@ -14,17 +16,17 @@
 <table class="table table-bordered" id="MyTable" style="width:auto;white-space: nowrap;">
     
     <thead>
-        <tr><th class="tac_heading" colspan="8">Chapter 13 Calculation of Minimum Distribution to Unsecured Claims to Protect Non-Exempt Assets</th>
+        <tr><th class="tac_heading" colspan="8" >Chapter 13 Calculation of Minimum Distribution to Unsecured Claims to Protect Non-Exempt Assets</th>
     </tr></thead>
     <tbody>
             <tr>
                 <td class="tac_heading3" style="background-color:#b9c9fe; ">Type of Asset:</td>
-                <td><select class="asset1" name="asset type" size="1" id="121" tabindex="10"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
-                <td><select class="asset2" name="asset type" size="1" id="131" tabindex="20"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
-                <td><select class="asset3" name="asset type" size="1" id="141" tabindex="30"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
-                <td class="tac_hiddencolumn1"><select class="asset4" name="asset type" size="1" id="151" tabindex="40"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
-                <td class="tac_hiddencolumn2"><select class="asset5" name="asset type" size="1" id="161" tabindex="50"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
-                <td class="tac_hiddencolumn3"><select class="asset6" name="asset type" size="1" id="171" tabindex="60"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddentext">[TextBox101.150]</br><select class="asset1" name="asset type" size="1" id="121" tabindex="10"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddentext">[TextBox102.150]</br><select class="asset2" name="asset type" size="1" id="131" tabindex="20"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddentext">[TextBox103.150]</br><select class="asset3" name="asset type" size="1" id="141" tabindex="30"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Deposit Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn1 tac_hiddentext">[TextBox104.150]</br><select class="asset4" name="asset type" size="1" id="151" tabindex="40"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn2 tac_hiddentext">[TextBox105.150]</br><select class="asset5" name="asset type" size="1" id="161" tabindex="50"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
+                <td class="tac_hiddencolumn3 tac_hiddentext">[TextBox106.150]</br><select class="asset6" name="asset type" size="1" id="171" tabindex="60"><option>Choose One</option><option>Real Property</option><option>Vehicles</option><option>Cash/Depository Accounts</option><option>Personal Injury Claim</option><option>Inheritance</option><option>Life Ins. Surrender Value</option><option>Boat/RV</option><option>Other</option></select></td>
                 <td class="tac_total" valign="center"><strong>TOTALS</strong></td>
             </tr>
                 <tr>
@@ -244,10 +246,10 @@
 </table>
 </div>
 <div id="buttons">
-    <input type="button" id="calculateButton" class="btn btn-sm btn-primary" tabindex="-1" value="Re-Calculate">
+    <input type="button" id="calculateButton" class="btn btn-sm btn-primary" tabindex="-1" value="Final Calculate Before Snap">
     <input type="button" id="addColumn" class="btn btn-sm btn-success " tabindex="-1" value="Add Column +">
     <input type="button" id="removeColumn" class="btn btn-sm btn-warning " tabindex="-1" value="Remove Column -">
-    <input type="button" id="resetButton" class="btn btn-sm btn-secondary " tabindex="-1" value="Reset">
+    <a onclick="if(!(confirm('Are you sure you want to remove all the data from this worksheet?  This action cannot be undone.')))return false;WCgoToApp('CaseWorksheet.aspx?clear=1&amp;xwin=&amp;wstype=15')" title="Reset Worksheet" class="btn btn-danger btn-sm" style="color:#FFFFFF;" tabindex="-1">Reset Worksheet</a>
 </div>
 
 
