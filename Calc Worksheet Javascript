@@ -1,70 +1,78 @@
 function wsOnLoad(){    
+
+    $('body').css('background-image', 'url("/13Software_app_tac/images/gplaypattern.png")');
+    $('textarea').css('white-space' , 'pre-wrap').css('width', '100%');
+    $('input[name*="TextBox_"]').addClass("form-control"); // add bootstrap form-control class to TextBox elements
+    $('.tac_hiddentext').find('intput[name*="TextBox_"]').removeClass("form-control");
+    $('table').find('input[name*="TextBox_"]').css('width', '100%').css('text-align', 'left'); // expand TextBox width to fill table cell
+    //declare variable i that is used for # of columns 
     var i;
+    //set initial value to 3 for 3 columns displayed. 
     i = 3;
+    // set variables to get contents of first box for columns 1,4,5,6. 
     var checkfirstbox = document.getElementById("TextBox_193_221").value;
     var checkfourthbox = document.getElementById("TextBox_193_251").value;
     var checkfifthbox = document.getElementById("TextBox_193_261").value;
     var checksixthbox = document.getElementById("TextBox_193_271").value;
+    //disable any fields with class "tac_readonly" and set background to yellow 
     $(".tac_readonly").prop( "disabled", true );
     $('.tac_readonly').css('background-color' , '#FFFCBB');
-    //$('input[type="text"]').disabled{background-color:red;}
+    $('.tac_hiddentext').find('input').hide();
 
     //CHeck if first load (Determined if first asset value is blank) if so, run Reset function to populate fields with $0.00 
     // if not first load, then check to see if hidden columns contain value in first box, if so, show them, if not, hide them. 
-
     if (checkfirstbox == '') {
         Reset();
         //console.log("2")
     }
     else {
+      //  $('.tac_hiddentext').find('input').show();
         other_amount_input();
-        //console.log("Not FIrst Load")
-        //collapse();
-        if (checkfourthbox == '$0.00') {
-            $('.tac_hiddencolumn1').hide();
-            $('.tac_adjustcolumn').attr('colspan',5);
-            $('.tac_adjustcolumn2').attr('colspan',4);
-            $('.tac_adjustcolumn3').attr('colspan',3);
-         //   i = 3;
-        }
-        else {
-            i = 3;
+       // console.log("Not FIrst Load")
+        //if Fourth, Fifth and Sixth column first box is empty then collapse. 
+        if (checkfourthbox == '$0.00' && checkfifthbox == '$0.00' && checksixthbox == '$0.00') {
             collapse();
-           // AddColumn();
-        };
-        if (checkfifthbox == '$0.00') {
-        $('.tac_hiddencolumn2').hide();
-        $('.tac_adjustcolumn').attr('colspan',6);
-        $('.tac_adjustcolumn2').attr('colspan',5);
-        $('.tac_adjustcolumn3').attr('colspan',4); 
-    
-        }
-        else {
-            i = 4;
-            AddColumn();
-        };
-        if (checksixthbox == '$0.00') {
+         //   console.log("first box 4 5 6 == $0.00");
+         //   i = 3;
+        }//if only fifth adn sixth are $0.00 then don't show those
+        else if (checkfifthbox == '$0.00' && checksixthbox == '$0.00') {
+            $('.tac_hiddencolumn2').hide();
             $('.tac_hiddencolumn3').hide();
-        $('.tac_adjustcolumn').attr('colspan',7);
-        $('.tac_adjustcolumn2').attr('colspan',6);
-        $('.tac_adjustcolumn3').attr('colspan',5); 
-           // i = 5
-        }
+            $('.tac_adjustcolumn').attr('colspan',6);
+            $('.tac_adjustcolumn2').attr('colspan',5);
+            $('.tac_adjustcolumn3').attr('colspan',4);
+           // console.log("first box 5 6 == $0.00"); 
+           
+
+        }//if only sixth box is $0.00 then don't show it. 
+        else if (checksixthbox == '$0.00') {
+            $('.tac_hiddencolumn3').hide();
+            $('.tac_adjustcolumn').attr('colspan',7);
+            $('.tac_adjustcolumn2').attr('colspan',6);
+            $('.tac_adjustcolumn3').attr('colspan',5);
+           // console.log("first box 6 == $0.00"); 
+           
+
+        } // otherwise if information is in the first box for all 6 columns, show all fields. 
         else {
-            i= 5;
-            AddColumn();
+           i = 5;
+           AddColumn();
+        //console.log(" show all 6 boxes");
+
         };
+        //$("select.asset1").val(document.getElementById("TextBox_193_101").value).change();
+        //$("select.asset2").val(document.getElementById("TextBox_193_102").value).change();
+        //$("select.asset3").val(document.getElementById("TextBox_193_103").value).change();
+        //$("select.asset4").val(document.getElementById("TextBox_193_104").value).change();
+        //$("select.asset5").val(document.getElementById("TextBox_193_105").value).change();
+        //$("select.asset6").val(document.getElementById("TextBox_193_106").value).change();
+
+       
     }
 
-
-
-
-
 // on each text box change, run the Other Amount Input function to perform calculations 
-
     $('[id^=TextBox_]').on('change', function () { 
         other_amount_input();
-        
        
     })
 
@@ -74,11 +82,12 @@ function wsOnLoad(){
 
     $("select.asset1").change(function(){
         var selectedasset = $(this).children("option:selected").val();
-       
+        document.getElementById("TextBox_193_101").value = selectedasset;
 
         if (selectedasset == "Real Property") {
            
            document.getElementById("TextBox_193_523").value = "8.00";
+          
         }
         else {
             document.getElementById("TextBox_193_523").value = "0";
@@ -86,6 +95,7 @@ function wsOnLoad(){
     });
     $("select.asset2").change(function(){
         var selectedasset = $(this).children("option:selected").val();
+        document.getElementById("TextBox_193_102").value = selectedasset;
        
 
         if (selectedasset == "Real Property") {
@@ -98,6 +108,7 @@ function wsOnLoad(){
     });
     $("select.asset3").change(function(){
         var selectedasset = $(this).children("option:selected").val();
+        document.getElementById("TextBox_193_103").value = selectedasset;
        
 
         if (selectedasset == "Real Property") {
@@ -110,6 +121,7 @@ function wsOnLoad(){
     });
     $("select.asset4").change(function(){
         var selectedasset = $(this).children("option:selected").val();
+        document.getElementById("TextBox_193_104").value = selectedasset;
        
 
         if (selectedasset == "Real Property") {
@@ -122,6 +134,7 @@ function wsOnLoad(){
     });
     $("select.asset5").change(function(){
         var selectedasset = $(this).children("option:selected").val();
+        document.getElementById("TextBox_193_105").value = selectedasset;
        
 
         if (selectedasset == "Real Property") {
@@ -134,6 +147,7 @@ function wsOnLoad(){
     });
     $("select.asset6").change(function(){
         var selectedasset = $(this).children("option:selected").val();
+        document.getElementById("TextBox_193_106").value = selectedasset;
        
 
         if (selectedasset == "Real Property") {
@@ -164,7 +178,8 @@ $("[id^=addColumn]").click(function () {
 
  $("[id^=calculateButton]").on('click', function () {
    // //console.log("calculateButton clicked")
-   UpdateEvent();
+   SaveEvent();
+   alert("Save complete, please create snapshot")
 });
 
 function RemoveColumn() { // hide columns
@@ -455,7 +470,7 @@ try {
     document.getElementById("TextBox_193_574").value = COS_SIX ;
     //Final Value for Schedules
     var FVS_ONE= parseFloat(document.getElementById("TextBox_193_521").value) - parseFloat(document.getElementById("TextBox_193_522").value) - parseFloat(document.getElementById("TextBox_193_524").value);
-    document.getElementById("TextBox_193_525").value = FVS_ONE ;
+    document.getElementById("TextBox_193_525").value = parseFloat(FVS_ONE) ;
     var FVS_TWO= parseFloat(document.getElementById("TextBox_193_531").value) - parseFloat(document.getElementById("TextBox_193_532").value) - parseFloat(document.getElementById("TextBox_193_534").value);
     document.getElementById("TextBox_193_535").value = FVS_TWO ;
     var FVS_THREE= parseFloat(document.getElementById("TextBox_193_541").value) - parseFloat(document.getElementById("TextBox_193_542").value) - parseFloat(document.getElementById("TextBox_193_544").value);
@@ -539,14 +554,14 @@ document.getElementById("TextBox_193_578").value = parseFloat(document.getElemen
         var totalexemptionsum = parseFloat(document.getElementById("TextBox_193_528").value)  + parseFloat(document.getElementById("TextBox_193_538").value)  + parseFloat(document.getElementById("TextBox_193_548").value)  + parseFloat(document.getElementById("TextBox_193_558").value)  + parseFloat(document.getElementById("TextBox_193_568").value)  + parseFloat(document.getElementById("TextBox_193_578").value) ;
     document.getElementById("TextBox_193_588").value = totalexemptionsum ; 
     
-        var minimumdistro = (netequitysum - totalexemptionsum);
+        var minimumdistro = (parseFloat(netequitysum) - parseFloat(totalexemptionsum));
         //Check if negative (less than zero) show 0, else show number. 
     if (minimumdistro > 0) { 
         document.getElementById("TextBox_193_681").value = minimumdistro;
        // alert("minimum distro: " + minimumdistro)
     }
     else { 
-        document.getElementById("TextBox_193_681").value = 0;
+        document.getElementById("TextBox_193_681").value = 0.00;
     }
 
     
@@ -655,36 +670,39 @@ function collapse()
 
 function Reset() { //reset all fields
     $("input:text").val('0.00');
+    $('.tac_hiddentext').find('input').val('');
     $('textarea[name*="TextBox_"]').val('');
-    UpdateEvent();
+   
             collapse(); //hide columns 4,5,6
             add_format();
             i=3; // reset i back to 3 
+            $('input[name*="TextBox_"]').each(function()
+            {
+                    var element = document.getElementById(this.id); 
+                        var event; 
+                        if(typeof(Event) === 'function') 
+                        { // non IE browsers 
+                            event = new Event('change'); 
+                        }
+                        else
+                        { // IE 
+                            event = document.createEvent('Event'); 
+                            event.initEvent('change', true, true); 
+                        } 
+                        element.dispatchEvent(event);
+                    })
+
+    };
+    
 
 
-}
-
-function UpdateEvent(){
-    $('textarea[name*="TextBox_"]').each(function()
-    {
-     var element = document.getElementById(this.id); 
-                var event; 
-                if(typeof(Event) === 'function') 
-                { // non IE browsers 
-                    event = new Event('change'); 
-                }
-                else
-                { // IE 
-                    event = document.createEvent('Event'); 
-                    event.initEvent('change', true, true); 
-                } 
-                element.dispatchEvent(event);
-
-})
-
-    $('input[name*="TextBox_"]').each(function()
+function SaveEvent(){
+    $('.tac_readonly').find('input[name*="TextBox_"]').each(function()
         {
-        var element = document.getElementById(this.id); 
+            var checkvalue = document.getElementById(this.id).value
+            console.log("check value: " + checkvalue)
+            if (checkvalue != '$0.00') {
+                var element = document.getElementById(this.id); 
                     var event; 
                     if(typeof(Event) === 'function') 
                     { // non IE browsers 
@@ -696,12 +714,66 @@ function UpdateEvent(){
                         event.initEvent('change', true, true); 
                     } 
                     element.dispatchEvent(event);
+                }
+
+    })
+
+
+    $('.tac_hiddentext').find('input[name*="TextBox_"]').each(function()
+    {
+       // console.log("check value: " + checkvalue)
+       var checkvalue = document.getElementById(this.id).value
+       // console.log("check value: " + checkvalue)
+        if (checkvalue != '') {
+            var element = document.getElementById(this.id); 
+                var event; 
+                if(typeof(Event) === 'function') 
+                { // non IE browsers 
+                    event = new Event('change'); 
+                }
+                else
+                { // IE 
+                    event = document.createEvent('Event'); 
+                    event.initEvent('change', true, true); 
+                } 
+                element.dispatchEvent(event);
+        }
+
+})
+
+
+    $('.tac_percentage').find('input[name*="TextBox_"]').each(function()
+        {
+            var checkvalue = document.getElementById(this.id).value
+           // console.log("check value: " + checkvalue)
+            if (checkvalue != '0.00' || checkvalue != '0') {
+                var element = document.getElementById(this.id); 
+                    var event; 
+                    if(typeof(Event) === 'function') 
+                    { // non IE browsers 
+                        event = new Event('change'); 
+                    }
+                    else
+                    { // IE 
+                        event = document.createEvent('Event'); 
+                        event.initEvent('change', true, true); 
+                    } 
+                    element.dispatchEvent(event);
+                }
 
     })
 };
 
+function loadDropDowns(){
+    $("select.asset1").val(document.getElementById("TextBox_193_101").value).change();
+    $("select.asset2").val(document.getElementById("TextBox_193_102").value).change();
+    $("select.asset3").val(document.getElementById("TextBox_193_103").value).change();
+    $("select.asset4").val(document.getElementById("TextBox_193_104").value).change();
+    $("select.asset5").val(document.getElementById("TextBox_193_105").value).change();
+    $("select.asset6").val(document.getElementById("TextBox_193_106").value).change();
+}
+
+
 // Left to do 
-// * Fix loading issue with display width, headings are showing extra column when they shouldn't. 
-// * Fix saving speed when clicking Re-Calculate
-// * Rename re-calculate to final save 
-// * find a way to preserve drop down select (Make hidden text box below selection, update that box so it saves in database and shows on snap)
+// Function Test all boxes
+// Maybe add function to set drop down values so they will work in snap shot and remove text boxes? 
