@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Array</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh5U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="html2canvas.min.js"> </script>
+<script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tableContent" id="tableContent">
+        <div class="tableheader">
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr class="bg-info">
+                        <td colspan="5"><h5>Ch.13 Calculation of Min. Distribution to Unsec Claims to Protect Non-Exempt Assets</h5></td>
+                    </tr>
+                    <tr>
+                        <th>Case Number: (ex. 21-12345)</th>
+                        <td class="tac_text"><input  type="text" class="tac_text"data-input data-header-section1 name="data1Input" id="100" value="20-12345" tabindex="1"></td>
+    
+                    </tr>
+                    <tr>
+                        <th>Type of Asset</th>
+                        <td class="bg-info"><select data-select-option name="asset1" id="101" tabindex="2">
+                            <option value="Select One">Select One</option>
+                            <option value="Real Property">Real Property</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Life Insurance">Life Insurance</option>
+                            <option value="Vehicles">Vehicles</option>
+                            <option value="401k">401k</option>
+                        </select></td>
+                        <td class="bg-info"><select data-select-option name="asset2" id="102" tabindex="11">
+                            <option value="Select One">Select One</option>
+                            <option value="Real Property">Real Property</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Life Insurance">Life Insurance</option>
+                            <option value="Vehicles">Vehicles</option>
+                            <option value="401k">401k</option>
+                        </select></td>
+                        <td class="bg-info"><select data-select-option name="asset3" id="103" tabindex="20">
+                            <option value="Select One">Select One</option>
+                            <option value="Real Property">Real Property</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Life Insurance">Life Insurance</option>
+                            <option value="Vehicles">Vehicles</option>
+                            <option value="401k">401k</option>
+                        </select></td>
+                        <td class="bg-info totalcolumn">Totals</td>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <th>Full Fair Market Value of Asset:</th>
+                    <td class="tac_money"><input  type="text" class="tac_money"data-input data-ffmv-section1 name="data1Input" id="ffmva111" value="" tabindex="3"></td>
+                    <td class="tac_money"><input  type="text" class="tac_money"data-input data-ffmv-section1 name="data1Input" id="ffmva121" value="" tabindex="12"></td>
+                    <td class="tac_money"><input  type="text" class="tac_money"data-input data-ffmv-section1 name="data1Input" id="ffmva131" value="" tabindex="21"></td>
+                    <td class="table-warning totalcolumn"><span id="totffmva171"></span></td>
+                </tr>
+                <tr>
+                    <th>Percentage of Ownership (%):</th>
+                    <td class="tac_percentage"><input  type="text" class="tac_percentage"data-input data-poo-section1 name="data2Input" id="poo112" value="100" tabindex="4"></td>
+                    <td class="tac_percentage"><input  type="text" class="tac_percentage"data-input data-poo-section1 name="data2Input" id="poo122" value="100" tabindex="13"></td>
+                    <td class="tac_percentage"><input  type="text" class="tac_percentage"data-input data-poo-section1 name="data2Input" id="poo132" value="100" tabindex="22"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Debtor’s Actual Gross Interest:</th>
+                    <td class="table-warning"><span id="dagi113"></span></td>
+                    <td class="table-warning"><span id="dagi123"></span></td>
+                    <td class="table-warning"><span id="dagi133"></span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Total Valid Secured Loans:</th>
+                    <td class="tac_money"><input  type="text" class="tac_money"data-input data-tvsl-section1 name="data1Input" id="tvsl114" value="" tabindex="5"></td>
+                    <td class="tac_money"><input  type="text" class="tac_money"data-input data-tvsl-section1 name="data1Input" id="tvsl124" value="" tabindex="14"></td>
+                    <td class="tac_money"><input  type="text" class="tac_money"data-input data-tvsl-section1 name="data1Input" id="tvsl134" value="" tabindex="23"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Pro-rated Liens:</th>
+                    <td class="table-warning"><span id="prl115"></span></td>
+                    <td class="table-warning"><span id="prl125"></span></td>
+                    <td class="table-warning"><span id="prl135"></span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Debtor's Equity:</th>
+                    <td class="table-warning"><span id="de116"></span></td>
+                    <td class="table-warning"><span id="de126"></span></td>
+                    <td class="table-warning"><span id="de136"></span></td>
+                    <td class="table-warning totalcolumn"><span id="totde176"></span></td>
+
+                </tr>
+            </tbody>
+     
+            <thead class="bg-info">
+                <tr>
+                    <th colspan="5"><h5>Determination of Application and Exemptions</h5></th>                  
+                </tr>
+            </thead>
+                    <tbody>
+                        <tr>
+                            <th>Type of Exemption</th>
+                            <td class="tac_text "><input type="text" name="toe210" id="toe210" rows="1" tabindex="6"></input></td>
+                            <td class="tac_text"><input type="text" name="toe220" id="toe220"  rows="1" tabindex="15"></input></td>
+                            <td class="tac_text"><input type="text" name="toe230" id="toe230" rows="1" tabindex="24"></input></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <th>Amount of Exemption</th>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-aoe-section1 name="data1Input" id="aoe211" value="" tabindex="7"></td>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-aoe-section1 name="data1Input" id="aoe221" value="" tabindex="16"></td>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-aoe-section1 name="data1Input" id="aoe231" value="" tabindex="25"></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <th>Wildcard Exemptions Used</th>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-weu-section1 name="data1Input" id="weu212" value="" tabindex="8"></td>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-weu-section1 name="data1Input" id="weu222" value="" tabindex="17"></td>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-weu-section1 name="data1Input" id="weu232" value="" tabindex="26"></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <th>Total of Exemptions Used</th>
+                            <td class="table-warning"><span id="te213"></span></td>
+                            <td class="table-warning"><span id="te223"></span></td>
+                            <td class="table-warning"><span id="te233"></span></td>
+                            <td></td>
+
+                        </tr>
+                    </tbody>
+            <thead>
+                <tr>
+                    <th colspan="5" class="bg-info"><h5>Calculation of Hypothetical Administrative Costs of Chapter 7 Trustee</h5></th>
+                </tr>
+            </thead>
+                    <tbody>
+                        <tr>
+                            <th>Total Hyp. Ch 7 Trustee Fees:</th>
+                            <td class="table-warning"><span id="hypo311"></span></td>
+                            <td class="table-warning"><span id="hypo321"></span></td>
+                            <td class="table-warning"><span id="hypo331"></span></td>
+                            <td class="table-warning totalcolumn"><span id="totde371"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Additional Hyp. Ch. 7 Admin Expenses</th>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-hypo-section1 name="data1Input" id="addhypo312" value="" tabindex="9"></td>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-hypo-section1 name="data1Input" id="addhypo322" value="" tabindex="18"></td>
+                            <td class="tac_money"><input  type="text" class="tac_money"data-input data-hypo-section1 name="data1Input" id="addhypo332" value="" tabindex="27"></td>
+                            <td class="table-warning totalcolumn"><span id="totaddhypo372"></span></td>
+                        </tr>
+                    </tbody>
+            <thead>
+                <tr>
+                    <th colspan="5" class="bg-info"><h5>Final Determination of Net Asset Values for Schedules A, B and C</h5></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Debtor's Actual Gross Interest:</th>
+                    <td class="table-warning"><span id="finaldagi411"></span></td>
+                    <td class="table-warning"><span id="finaldagi421"></span></td>
+                    <td class="table-warning"><span id="finaldagi431"></span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Fees:</th>
+                    <td class="table-warning"><span id="finalfees412"></span></td>
+                    <td class="table-warning"><span id="finalfees422"></span></td>
+                    <td class="table-warning"><span id="finalfees432"></span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Percentage Cost of Sale</th>
+                    <td class="tac_percentage"><input  type="text" class="tac_percentage"data-input data-pcos-section1 name="data2Input" id="finalpcos413" value="" tabindex="10"></td>
+                    <td class="tac_percentage"><input  type="text" class="tac_percentage"data-input data-pcos-section1 name="data2Input" id="finalpcos423" value="" tabindex="19"></td>
+                    <td class="tac_percentage"><input  type="text" class="tac_percentage"data-input data-pcos-section1 name="data2Input" id="finalpcos433" value="" tabindex="28"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Hypothetical Cost of Sale</th>
+                    <td class="table-warning"><span id="finalhcos414"></span></td>
+                    <td class="table-warning"><span id="finalhcos424"></span></td>
+                    <td class="table-warning"><span id="finalhcos434"></span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Final Value for Schedules</th>
+                    <td class="table-warning"><span id="finalfvfs415"></span></td>
+                    <td class="table-warning"><span id="finalfvfs425"></span></td>
+                    <td class="table-warning"><span id="finalfvfs435"></span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Pro-Rated Liens:</th>
+                    <td class="table-warning"><span id="finalprl416"></span></td>
+                    <td class="table-warning"><span id="finalprl426"></span></td>
+                    <td class="table-warning"><span id="finalprl436"></span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Net Equity: </th>
+                    <td class="table-warning"><span id="finalde417"></span></td>
+                    <td class="table-warning"><span id="finalde427"></span></td>
+                    <td class="table-warning"><span id="finalde437"></span></td>
+                    <td class="table-warning totalcolumn"><span id="totde477"></span></td>
+                </tr>
+                <tr>
+                    <th>Total Exemptions</th>
+                    <td class="table-warning"><span id="finalte418"></span></td>
+                    <td class="table-warning"><span id="finalte428"></span></td>
+                    <td class="table-warning"><span id="finalte438"></span></td>
+                    <td class="table-warning totalcolumn"><span id="totte478"></span></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="5" class="bg-info"><h5>Minimum Distrubtion to Unsecured</h5></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th colspan="4">Minimum Distrubtion</th>
+                    <td class="table-info totalcolumn"><span id="mindist571"></span></td>
+                </tr>
+            </tbody>
+
+            </table>
+            <div class="tac_buttons">
+                <button class="btn btn-primary" id="submit" onclick="calcAll();" tabindex="80">
+                  Calculate
+                </button>
+                <button class="btn btn-success" onclick="AddColumn()" tabindex="81">
+                  Add Column +
+                </button>
+                <button class="btn btn-danger" onclick="RemoveColumn()" tabindex="82">
+                  Remove Column &#8211;
+                </button>
+                <button class="btn btn-secondary" onclick="proxyReset()" tabindex="83">
+                  Reset
+                </button>
+                <button class="btn btn-warning" id="export" onclick="generate()">
+                  Save As PDF
+                </button>
+              </div>
+
+
+</body>
+</html>
