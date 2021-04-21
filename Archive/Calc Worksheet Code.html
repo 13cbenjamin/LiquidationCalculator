@@ -1,0 +1,637 @@
+<div style="background-color:#FFFFFF; width: 100%; padding: 0 0 10 0;">
+<div id="header_93_1" style="background-color:#D8D8D8; height: 28px; width: 100%;">
+<ul style="margin: 10; padding: 0; list-style-type: none; color:#000000;">
+    <li style="display: inline; float: left; font-size: 150%; font-weight: bold;">Liquidation Analysis</li>
+    <li id="V2" style="display: inline; float: left; font-size: 150%; font-weight: bold;"></li>
+</ul> 
+</div>
+<div style="padding: 0 10 0 10;">
+<p style="clear: both;"></p>
+
+<table style="border-collapse: collapse; width: 1000px" cellpadding=4 cellspacing=2 bgcolor=FFFFFF>
+    <tr>
+        <th colspan="8" style="border-style:solid; border-width:1px; border-color:#E2E2E2; background-color:#E2E2E2; color:#000000;font-size:14px;">Chapter 13 Calculation of Minimum Distribution to Unsecured Claims to Protect Non-Exempt Assets</th>
+    </tr>
+    <tr>
+        <td colspan="8"></td>
+    </tr>
+    <tr>
+        <td rowspan="2"></td>
+        <th colspan="8" style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#b9c9fe;">Description of Asset</th>
+        <th rowspan="2" valign="bottom" style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-right-color:#b9c9fe; border-bottom-color:#b9c9fe; width: 16%;">TOTALS</th>
+    </tr>
+    <tr>
+      <td class="tRowClrGray">[CommentBox121.150]</td>
+      <td class="tRowClrGray">[CommentBox131.150]</td>
+      <td class="tRowClrGray">[CommentBox141.150]</td>
+      <td class="tRowClrGray">[CommentBox151.150]</td>
+      <td class="tRowClrGray">[CommentBox161.150]</td>
+      <td class="tRowClrGray">[CommentBox171.150]</td>
+    </tr>
+    <tr>
+        <td colspan="8"></td>
+    </tr>
+    <tr>
+      <th colspan="8" style="border-style:solid; border-width:1px; border-color:#E2E2E2; background-color:#E2E2E2; color:#000000;font-size:14px;">Determination of Non-Exempt Equity</th>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Full Fair Market Value of Asset:</td>
+        <td class="tRowClr2">[TextBox^Money^*101*221.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*104*231.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*107*241.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*110*251.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*113*261.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*116*271.150]</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999; text-align:center;"><b>(*|TextBox221_93| + |TextBox231_93| + |TextBox241_93| + |TextBox251_93| + |TextBox222_93| + |TextBox232_93|^Money^*)</b></td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Percentage of Ownership (%):</td>
+        <td class="tRowClr2">[TextBox^Numbers^*102*222.150]</td>
+        <td class="tRowClr2">[TextBox^Numbers^*105*232.150]</td>
+        <td class="tRowClr2">[TextBox^Numbers^*108*242.150]</td>
+        <td class="tRowClr2">[TextBox^Numbers^*111*252.150]</td>
+        <td class="tRowClr2">[TextBox^Numbers^*114*262.150]</td>
+        <td class="tRowClr2">[TextBox^Numbers^*117*272.150]</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Debtor's Actual Gross Interest:</td>
+        <td id=223 style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox221_93| * (|TextBox222_93|/100)^Money^*)</td>
+        <td id=233 style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox231_93| * (|TextBox232_93|/100)^Money^*)</td>
+        <td id=243 style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox241_93| * (|TextBox242_93|/100)^Money^*)</td>
+        <td id=253 style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox251_93| * (|TextBox252_93|/100)^Money^*)</td>
+        <td id=263 style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox261_93| * (|TextBox262_93|/100)^Money^*)</td>
+        <td id=273 style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox271_93| * (|TextBox272_93|/100)^Money^*)</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Total of Valid & Secured Loans:</td>
+        <td class="tRowClr2">[TextBox^Money^*103*224.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*106*234.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*109*244.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*112*254.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*115*264.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*118*274.150]</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Pro-rated Liens:</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox224_93| * (|TextBox222_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox234_93| * (|TextBox232_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox244_93| * (|TextBox242_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox254_93| * (|TextBox252_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox264_93| * (|TextBox262_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox275_93| * (|TextBox272_93|/100)^Money^*)</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Debtor's Equity:</td>
+        <td id="equity1" style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>(*(|TextBox221_93| * (|TextBox222_93|/100)^Money^) - (|TextBox224_93| * (|TextBox222_93|/100)^Money^)*)</b></td>
+        <td id="equity2" style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>(*(|TextBox231_93| * (|TextBox232_93|/100)^Money^) - (|TextBox234_93| * (|TextBox232_93|/100)^Money^)*)</b></td>
+        <td id="equity3" style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>(*(|TextBox241_93| * (|TextBox242_93|/100)^Money^) - (|TextBox244_93| * (|TextBox242_93|/100)^Money^)*)</b></td>
+        <td id="equity4" style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>(*(|TextBox251_93| * (|TextBox252_93|/100)^Money^) - (|TextBox254_93| * (|TextBox252_93|/100)^Money^)*)</b></td>
+        <td id="equity4" style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>(*(|TextBox261_93| * (|TextBox262_93|/100)^Money^) - (|TextBox264_93| * (|TextBox262_93|/100)^Money^)*)</b></td>
+        <td id="equity4" style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>(*(|TextBox271_93| * (|TextBox272_93|/100)^Money^) - (|TextBox274_93| * (|TextBox272_93|/100)^Money^)*)</b></td>
+        <td id="equity5" style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999; text-align:center;"><b>|~SELECT '$' + 
+         CONVERT(VARCHAR,(SELECT CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+      ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) END) + 
+
+            (SELECT CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+   ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) END) + 
+
+            (SELECT CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+   ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) END) + 
+
+            (SELECT CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+   ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) END) + 
+
+            (SELECT CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+    ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) END) + 
+
+            (SELECT CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+    ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) END), 10) AS FieldData~| 
+  </b></td>
+    </tr>
+    <tr>
+        <td colspan="8"></td>
+    </tr>
+    <tr>
+        <th colspan="8" style="border-style:solid; border-width:1px; border-color:#E2E2E2; background-color:#E2E2E2; color:#000000;font-size:14px;">Determination and Application of Exemptions</th>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Type of Exemption:</td>
+        <td class="tRowClr2">[CommentBox*113*321.150]</td>
+        <td class="tRowClr2">[CommentBox*116*331.150]</td>
+        <td class="tRowClr2">[CommentBox*119*341.150]</td>
+        <td class="tRowClr2">[CommentBox*122*351.150]</td>
+        <td class="tRowClr2">[CommentBox*122*361.150]</td>
+        <td class="tRowClr2">[CommentBox*122*371.150]</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Amount of Exemption:</td>
+        <td class="tRowClr2">[TextBox^Money^*114*322.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*117*332.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*120*342.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*123*352.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*123*362.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*123*372.150]</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Wildcard Exemption Used:</td>
+        <td class="tRowClr2">[TextBox^Money^*115*323.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*118*333.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*121*343.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*124*353.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*124*363.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*124*373.150]</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Total of Exemptions Used:</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 322,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 323,0)AS MONEY))))),10) AS FieldData~|
+  </b></td>
+     <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) END)) , 
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 332,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 333,0)AS MONEY))))),10) AS FieldData~| 
+  </b></td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 342,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 343,0)AS MONEY))))),10) AS FieldData~|
+  </b></td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+               (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+               (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 352,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 353,0)AS MONEY))))),10) AS FieldData~|
+  </b></td>
+  <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+    CONVERT(VARCHAR,(dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+             (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+             (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+          ELSE 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) END)) ,
+          (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 362,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 363,0)AS MONEY))))),10) AS FieldData~|
+</b></td>
+<td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+    CONVERT(VARCHAR,(dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+             (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+             (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100))) < 0 THEN CONVERT(VARCHAR, '0') 
+          ELSE 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) END)) ,
+          (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 372,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 373,0)AS MONEY))))),10) AS FieldData~|
+</b></td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td>
+    </tr>
+    <tr>
+        <td colspan="8"></td>
+    </tr>
+    <tr>
+        <th colspan="8" style="border-style:solid; border-width:1px; border-color:#E2E2E2; background-color:#E2E2E2; color:#000000;font-size:14px;">Calculation of Hypothetical Administrative Costs of Chapter 7 Trustee</th>
+    </tr>
+    <tr>
+        <td rowspan="5" valign="top" style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Total of Hypothetical Chapter 7 Trustee Commission Fees:</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) ), 
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100))) < 0 THEN 0 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) END)), 
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 322,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 323,0)AS MONEY)))), 
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY)))),10) AS FieldData~| 
+  </b></td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) ),
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100))) < 0 THEN 0
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 332,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 333,0)AS MONEY)))),
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY)))),10) AS FieldData~| 
+  </b></td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) ),
+                dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100))) < 0 THEN 0
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 342,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 343,0)AS MONEY)))),
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY)))),10) AS FieldData~|
+  </b></td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ),
+                dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100))) < 0 THEN 0
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 352,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 353,0)AS MONEY)))),
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY)))),10) AS FieldData~|
+  </b></td>
+  <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+    CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+          {CaseID},
+          ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ),
+              dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100))) < 0 THEN 0
+          ELSE 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) END)) ,
+          (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 362,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 363,0)AS MONEY)))),
+          (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY)))),10) AS FieldData~|
+</b></td>
+<td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;"><b>|~SELECT '$' + 
+    CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+          {CaseID},
+          ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ),
+              dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100))) < 0 THEN 0
+          ELSE 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) END)) ,
+          (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 372,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 373,0)AS MONEY)))),
+          (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY)))),10) AS FieldData~|
+</b></td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999; text-align:center;"><b>|~SELECT '$' + 
+            CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) ),
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100))) < 0 THEN 0
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 322,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 323,0)AS MONEY)))),
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY)))) +        
+ 
+   (dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) ),
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100))) < 0 THEN 0
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 332,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 333,0)AS MONEY)))),
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY)))) + 
+ 
+   (dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) ),
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100))) < 0 THEN 0
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 342,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 343,0)AS MONEY)))),
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY)))) + 
+ 
+            (dbo.udf_TAC_GetCh7Fees(
+                     {CaseID},
+                     ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ),
+                     dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                         (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                         (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100))) < 0 THEN 0
+                     ELSE 
+                         (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                         (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) END)) ,
+                     (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 352,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 353,0)AS MONEY)))),
+                     (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY)))) + 
+
+            (dbo.udf_TAC_GetCh7Fees(
+                    {CaseID},
+                    ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ),
+                    dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                        (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+                        (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100))) < 0 THEN 0
+                    ELSE 
+                        (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+                        (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) END)) ,
+                    (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 362,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 363,0)AS MONEY)))),
+                    (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY)))) + 
+ 
+   (dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ),
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100))) < 0 THEN 0
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) END)) ,
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 372,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 373,0)AS MONEY)))),
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY)))),10) AS FieldData~|
+  </b></td>
+    </tr>
+    <tr>
+        <td colspan="7" style="border-style:solid; border-width:1px; border-color:#C0C0C0; background-color:#C0C0C0; color:#000000;">Disbursement, incl. secured, under  $5,000:  25% of Disb.</td>
+    </tr
+    <tr>
+        <td colspan="7" style="border-style:solid; border-width:1px; border-color:#C0C0C0; background-color:#C0C0C0; color:#000000;">Disbursement, incl. secured, between $5,000 & $50,000:  10% of (Disb. minus $5,000) plus $1,250</td>
+    </tr  
+    <tr>
+        <td colspan="7" style="border-style:solid; border-width:1px; border-color:#C0C0C0; background-color:#C0C0C0; color:#000000;">Disbursement, incl. secured, between $50,000 & $1,000,000:  5% of (Disb. minus $50,000) plus $5,750</td>
+    </tr  
+    <tr>
+        <td colspan="7" style="border-style:solid; border-width:1px; border-color:#C0C0C0; background-color:#C0C0C0; color:#000000;">Disbursement, incl. secured, $1,000,000+: 3% of (Disb. minus $1,000,000) plus $53,250</td>
+    </tr  
+    <tr>
+        <td rowspan="2" valign="top" style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Additional Hypothetical Chapter 7 Administrative Expenses:</td>
+        <td class="tRowClr2">[TextBox^Money^*125*326.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*126*336.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*127*346.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*128*356.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*128*366.150]</td>
+        <td class="tRowClr2">[TextBox^Money^*128*376.150]</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999; text-align:center;"><b>(*|TextBox326_93| + |TextBox336_93| + |TextBox346_93| + |TextBox356_93| + |TextBox366_93| + |TextBox376_93|^Money^*)</b></td>
+    </tr>
+    <tr>
+        <td colspan="7" style="border-style:solid; border-width:1px; border-color:#C0C0C0; background-color:#C0C0C0; color:#000000;">This estimate includes attorney and other professional fees in0curred for the benefit of the estate.</td>
+    </tr>
+    <tr>
+        <td colspan="8"></td>
+    </tr>
+    <tr>
+        <th colspan="8" style="border-style:solid; border-width:1px; border-color:#E2E2E2; background-color:#E2E2E2; color:#000000;font-size:14px;">Final Determination of Net Asset Values for Schedules A, B, and C</th>
+    </tr>
+    <tr>
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Debtor's Actual Gross Interest:</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox221_93| * (|TextBox222_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox231_93| * (|TextBox232_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox241_93| * (|TextBox242_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox251_93| * (|TextBox252_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox261_93| * (|TextBox262_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox271_93| * (|TextBox272_93|/100)^Money^*)</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td> 
+    </tr> 
+    <tr> 
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Fees:</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) ), 
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100))) < 0 THEN 0 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) END)), 
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 322,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 323,0)AS MONEY)))), 
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY)))) + 
+   
+   CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 323,0)AS MONEY),10) AS FieldData~| 
+  </td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) ), 
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100))) < 0 THEN 0 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) END)), 
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 332,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 333,0)AS MONEY)))), 
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY)))) + 
+   
+   CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 333,0)AS MONEY),10) AS FieldData~|  
+  </td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) ), 
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100))) < 0 THEN 0 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) END)), 
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 342,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 343,0)AS MONEY)))), 
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY)))) + 
+   
+   CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 343,0)AS MONEY),10) AS FieldData~| 
+  </td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + 
+      CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+            {CaseID},
+            ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ), 
+            dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100))) < 0 THEN 0 
+            ELSE 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) END)), 
+            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 352,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 353,0)AS MONEY)))), 
+            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY)))) + 
+   
+   CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 353,0)AS MONEY),10) AS FieldData~| 
+  </td>
+  <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + 
+    CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+          {CaseID},
+          ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ), 
+          dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100))) < 0 THEN 0 
+          ELSE 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) END)), 
+          (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 362,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 363,0)AS MONEY)))), 
+          (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY)))) + 
+ 
+ CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 363,0)AS MONEY),10) AS FieldData~| 
+</td>
+<td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + 
+    CONVERT(VARCHAR,(dbo.udf_TAC_GetCh7Fees(
+          {CaseID},
+          ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ), 
+          dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100))) < 0 THEN 0 
+          ELSE 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+              (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) END)), 
+          (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 372,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 373,0)AS MONEY)))), 
+          (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY)))) + 
+ 
+ CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 373,0)AS MONEY),10) AS FieldData~| 
+</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td> 
+    </tr> 
+    <tr> 
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Percentage Cost of Sale:</td> 
+        <td class="tRowClr2">[TextBox^Numbers^*129*523.150]</td> 
+        <td class="tRowClr2">[TextBox^Numbers^*130*533.150]</td> 
+        <td class="tRowClr2">[TextBox^Numbers^*131*543.150]</td> 
+        <td class="tRowClr2">[TextBox^Numbers^*132*553.150]</td> 
+        <td class="tRowClr2">[TextBox^Numbers^*132*563.150]</td> 
+        <td class="tRowClr2">[TextBox^Numbers^*132*573.150]</td> 
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td> 
+    </tr> 
+    <tr> 
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Hypothetical Cost of Sale:</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox221_93| * (|TextBox222_93|/100) * (|TextBox523_93|/100)^Money^*)</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox231_93| * (|TextBox232_93|/100) * (|TextBox533_93|/100)^Money^*)</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox241_93| * (|TextBox242_93|/100) * (|TextBox543_93|/100)^Money^*)</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox251_93| * (|TextBox252_93|/100) * (|TextBox553_93|/100)^Money^*)</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox261_93| * (|TextBox262_93|/100) * (|TextBox563_93|/100)^Money^*)</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox271_93| * (|TextBox272_93|/100) * (|TextBox573_93|/100)^Money^*)</td> 
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td> 
+    </tr> 
+    <tr> 
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Final Value for Schedules:</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + CONVERT(VARCHAR,( 
+                        CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                        (dbo.udf_TAC_GetCh7Fees({CaseID},
+                        ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) ), 
+                        dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100))) < 0 THEN 0 
+                        ELSE 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100)) END)), 
+                            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 322,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 323,0)AS MONEY)))), 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 224,0)AS MONEY))) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 426,0)AS MONEY)) - ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 221,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 222,0)AS MONEY)/100))* (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 523,0)AS MONEY)/100)),10) AS FieldData~|</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + CONVERT(VARCHAR,( 
+                        CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                        (dbo.udf_TAC_GetCh7Fees({CaseID},
+                        ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) ), 
+                        dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100))) < 0 THEN 0 
+                        ELSE 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100)) END)), 
+                            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 332,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 333,0)AS MONEY)))), 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 234,0)AS MONEY))) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 436,0)AS MONEY)) - ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 231,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 232,0)AS MONEY)/100))* (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 533,0)AS MONEY)/100)),10) AS FieldData~|</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + CONVERT(VARCHAR,( 
+                        CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                        (dbo.udf_TAC_GetCh7Fees({CaseID},
+                        ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) ), 
+                        dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100))) < 0 THEN 0 
+                        ELSE 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100)) END)), 
+                            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 342,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 343,0)AS MONEY)))), 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 244,0)AS MONEY)))  +  CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 446,0)AS MONEY)) -  ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 241,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 242,0)AS MONEY)/100))* (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 543,0)AS MONEY)/100)),10) AS FieldData~|</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + CONVERT(VARCHAR,( 
+                        CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                        (dbo.udf_TAC_GetCh7Fees({CaseID},
+                        ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) ), 
+                        dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100))) < 0 THEN 0 
+                        ELSE 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100)) END)), 
+                            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 352,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 353,0)AS MONEY)))), 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 254,0)AS MONEY))) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 456,0)AS MONEY)) -  ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 251,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 252,0)AS MONEY)/100))* (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 553,0)AS MONEY)/100)),10) AS FieldData~|</td> 
+        
+                    <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + CONVERT(VARCHAR,( 
+                        CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+                        (dbo.udf_TAC_GetCh7Fees({CaseID},
+                        ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) ), 
+                        dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100))) < 0 THEN 0 
+                        ELSE 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100)) END)), 
+                            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 362,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 363,0)AS MONEY)))), 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 264,0)AS MONEY))) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 466,0)AS MONEY)) -  ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 261,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 262,0)AS MONEY)/100))* (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 563,0)AS MONEY)/100)),10) AS FieldData~|</td> 
+                            <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">|~SELECT '$' + CONVERT(VARCHAR,( 
+                        CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+                        (dbo.udf_TAC_GetCh7Fees({CaseID},
+                        ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) ), 
+                        dbo.udf_TAC_MinValue((SELECT(CASE WHEN(
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100))) < 0 THEN 0 
+                        ELSE 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) - 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100)) END)), 
+                            (SELECT (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 372,0)AS MONEY) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 373,0)AS MONEY)))), 
+                            (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 274,0)AS MONEY))) + CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 476,0)AS MONEY)) -  ((CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 271,0)AS MONEY) * (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 272,0)AS MONEY)/100))* (CAST(dbo.udfGetWorksheetData({CaseID}, 93, 'TextBox', 573,0)AS MONEY)/100)),10) AS FieldData~|</td> 
+                    <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td> 
+    </tr> 
+    <tr> 
+        <td style="background-color:#b9c9fe; border-style:solid; border-width:1px; border-color:#aabcfe; width: 18%;">Pro-rated Liens:</td> 
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox224_93| * (|TextBox222_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox234_93| * (|TextBox232_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox244_93| * (|TextBox242_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox254_93| * (|TextBox252_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox264_93| * (|TextBox262_93|/100)^Money^*)</td>
+        <td style="background-color:#fffe65; border-style:solid; border-width:1px; border-color:#999999;">(*|TextBox274_93| * (|TextBox272_93|/100)^Money^*)</td>
+        <td style="background-color:#C0C0C0; border-style:solid; border-width:1px; border-color:#999999; text-align:center;">n/a</td> 
+    </tr> 
+ </table>
+</div>
+</div>
